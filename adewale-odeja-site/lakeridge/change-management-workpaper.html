@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IT-320 Change management | Adewale Odeja</title>
+<meta name="description" content="Simulated ITGC engagement workpaper by Adewale Odeja, CISA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Adewale Odeja, CISA</a>
+  <ul><li><a class="link" href="index.html">Lakeridge case study</a></li><li><a class="link" href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="doc">
+<p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Lakeridge ITGC engagement</a> / IT-320
+Change management</p>
+<h1 id="it-320-itgc-testing-program-change-management">IT-320 ITGC
+Testing: Program Change Management</h1>
+<blockquote>
+<p><strong>Simulated engagement.</strong> All populations, evidence and
+results are constructed for training. No live environment was assessed.
+Service provider and product names (Northline, Keystone, Lakeshore
+Central, Ledgerline) are fictional.</p>
+</blockquote>
+<div class="tbl"><table>
+<tbody>
+<tr class="odd">
+<td><strong>Client</strong></td>
+<td>Lakeridge Community Credit Union Ltd.</td>
+</tr>
+<tr class="even">
+<td><strong>Period</strong></td>
+<td>Fiscal year ended October 31, 2026</td>
+</tr>
+<tr class="odd">
+<td><strong>Workpaper</strong></td>
+<td>IT-320</td>
+</tr>
+<tr class="even">
+<td><strong>Prepared by / date</strong></td>
+<td>A. Odeja / November 26, 2026</td>
+</tr>
+<tr class="odd">
+<td><strong>Reviewed by / date</strong></td>
+<td>[Reviewer] / [date]</td>
+</tr>
+<tr class="even">
+<td><strong>In scope</strong></td>
+<td>Keystone configuration and releases (Lakeridge-side), Ledgerline
+configuration, LOS configuration, infrastructure supporting in-scope
+applications, reports used in financial reporting</td>
+</tr>
+<tr class="odd">
+<td><strong>Cross-references</strong></td>
+<td>IT-100 Scoping memo. IT-200 CUEC analysis. IT-310 Access. IT-900
+Deficiency log</td>
+</tr>
+<tr class="even">
+<td><strong>Materiality used</strong></td>
+<td>Overall $550K, performance $360K, clearly trivial $27K (IT-100,
+revised)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="domain-objective">Domain objective</h2>
+<p>Changes to applications, configurations and reports that affect
+financial data are authorized, tested and approved before
+implementation, so that systems continue to process data completely and
+accurately.</p>
+<h2 id="sampling-conventions-applied-set-before-testing">Sampling
+conventions applied (set before testing)</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Convention</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Event-driven population over 50 items</td>
+<td>25 items, elevated risk</td>
+</tr>
+<tr class="even">
+<td>Monthly control, elevated risk</td>
+<td>5 of 12 months</td>
+</tr>
+<tr class="odd">
+<td>Populations of 10 or fewer</td>
+<td>Test all</td>
+</tr>
+<tr class="even">
+<td>Selection</td>
+<td>Random. Excel <code>RAND()</code> over the full extract, sorted
+ascending, first <em>n</em> selected. Selection file retained as
+IT-320-S1</td>
+</tr>
+<tr class="odd">
+<td>Expected deviations</td>
+<td>Zero. Any exception is investigated for root cause. Samples are
+<strong>not</strong> extended to "test out" of an exception</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Key:</strong> ✓ agreed without exception. ✗ exception. ✓*
+agreed using alternative evidence, explained.</p>
+<h2 id="summary">Summary</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Ref</th>
+<th>Control</th>
+<th>Design</th>
+<th>Operating effectiveness</th>
+<th>Result</th>
+<th>Deficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CM-01</td>
+<td>Keystone configuration changes approved by Lakeridge before
+submission to Northline</td>
+<td>Ineffective</td>
+<td>Not tested. Impact assessment</td>
+<td>DD, impact found</td>
+<td>D-04 (extended)</td>
+</tr>
+<tr class="even">
+<td>CM-02</td>
+<td>Changes to Lakeridge-managed systems approved before
+implementation</td>
+<td>Effective</td>
+<td><strong>Ineffective.</strong> 10 of 25 exceptions. Population
+incomplete</td>
+<td>OD</td>
+<td>D-14, D-15</td>
+</tr>
+<tr class="odd">
+<td>CM-03</td>
+<td>Changes tested before implementation, with evidence retained</td>
+<td>Ineffective</td>
+<td>Not tested</td>
+<td>DD</td>
+<td>D-08 (extended)</td>
+</tr>
+<tr class="even">
+<td>CM-04</td>
+<td>Emergency changes controlled and approved after the fact</td>
+<td>Ineffective</td>
+<td>Full population reviewed (4)</td>
+<td>DD, impact assessed</td>
+<td>D-16</td>
+</tr>
+<tr class="odd">
+<td>CM-05</td>
+<td>Ledgerline configuration changes segregated from approval</td>
+<td>Ineffective</td>
+<td>Compensating control tested: <strong>effective</strong> for
+accuracy, <strong>not</strong> for classification</td>
+<td>DD, partly compensated</td>
+<td>D-13</td>
+</tr>
+<tr class="even">
+<td>CM-06</td>
+<td>Changes to reports used in financial reporting are controlled</td>
+<td>No control</td>
+<td>Not tested</td>
+<td>DD</td>
+<td>D-17</td>
+</tr>
+<tr class="odd">
+<td>CM-07</td>
+<td>Keystone releases reviewed and accepted by Lakeridge (CUEC 13)</td>
+<td>Effective</td>
+<td><strong>Effective</strong> (full population, 2)</td>
+<td>Pass</td>
+<td>None</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2
+id="cm-01-keystone-configuration-changes-approved-by-lakeridge">CM-01
+Keystone configuration changes approved by Lakeridge</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control objective</strong></td>
+<td>Only authorized changes to Keystone rates, fees, calculation
+parameters and GL mapping are sent to Northline</td>
+</tr>
+<tr class="even">
+<td><strong>Control description</strong></td>
+<td>Application support analyst raises a Northline ticket. The same
+analyst approves it. No authorized requester list is held by Northline
+(IT-200, CUECs 4 and 6)</td>
+</tr>
+<tr class="odd">
+<td><strong>Test of design</strong></td>
+<td>Walkthrough of one rate change (Mar 2026). Inspected the Northline
+ticket: raised and approved by the same analyst. No reference to a
+business decision</td>
+</tr>
+<tr class="even">
+<td><strong>Conclusion on design</strong></td>
+<td><strong>Ineffective.</strong> Not tested further</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="impact-assessment">Impact assessment</h3>
+<p><strong>Population.</strong> Northline ticket extract of all
+Lakeridge configuration changes, FY2026: <strong>64 changes.</strong>
+Completeness: agreed to Northline's monthly client change report, all 12
+months ✓.</p>
+<p><strong>Filter.</strong> 23 changes affect financial calculations or
+GL posting. The other 41 (screen layouts, report formats, branch codes)
+were excluded as not financially relevant, with reasons recorded in
+IT-320-S2.</p>
+<p><strong>Test.</strong> Traced all 23 to a business authorization.</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Change type</th>
+<th>Count</th>
+<th>Authorization source</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deposit and loan rate changes</td>
+<td>16</td>
+<td>ALCO minutes</td>
+<td>16 ✓</td>
+</tr>
+<tr class="even">
+<td>Loan interest calculation parameter (Jan 14, 2026)</td>
+<td>1</td>
+<td>None at the time. Telephone instruction. Northline exception E2</td>
+<td>✗ See CM-04 EC1</td>
+</tr>
+<tr class="odd">
+<td>Fee changes</td>
+<td>5</td>
+<td>Board-approved fee schedule</td>
+<td>4 ✓, <strong>1 ✗</strong></td>
+</tr>
+<tr class="even">
+<td>GL mapping parameter</td>
+<td>1</td>
+<td>Finance Manager email request</td>
+<td>1 ✓</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Exception F1.</strong> NSF fee set at <strong>$48</strong>
+from April 1, 2026. The board-approved schedule is <strong>$45</strong>.
+Charged about 1,400 times to Oct 31. <strong>Estimated overcharge
+$4,200.</strong> Referred to the financial audit team. Below clearly
+trivial ($27K), so no audit adjustment. Reported to management for
+member refunds and as a conduct issue.</p>
+<p><strong>Conclusion.</strong> No independent approval exists. One
+change was unauthorized in amount and went undetected for seven months.
+<strong>D-04</strong> extended, with impact quantified.</p>
+<hr />
+<h2
+id="cm-02-changes-to-lakeridge-managed-systems-approved-before-implementation">CM-02
+Changes to Lakeridge-managed systems approved before implementation</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control objective</strong></td>
+<td>Every change to Lakeridge-managed in-scope systems is approved
+before implementation</td>
+</tr>
+<tr class="even">
+<td><strong>Control description</strong></td>
+<td>Change ticket raised in the service desk tool. Approved at the
+monthly CAB, recorded in minutes. Change Policy s.3 allows the Manager,
+IT Infrastructure to approve standard changes by email between
+meetings</td>
+</tr>
+<tr class="odd">
+<td><strong>Test of design</strong></td>
+<td>Walkthrough of one firewall change (Nov 2025): ticket, CAB minutes
+approving it, implementation date after approval. <strong>Design
+effective</strong> if performed consistently</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="population-and-completeness">Population and completeness</h3>
+<p><strong>Population.</strong> Service desk change log, FY2026, run by
+the Service Desk lead on Nov 19, 2026 (observed): <strong>86
+changes.</strong> Covers Ledgerline, LOS, AD, firewall, servers,
+backup.</p>
+<p><strong>Completeness, tested in the reverse direction.</strong> A
+ticket log only proves the changes someone chose to log. So we started
+from system records of changes and traced back to tickets.</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>System record</th>
+<th>Selected</th>
+<th>Traced to a ticket</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ledgerline configuration audit log (37 changes in FY2026)</td>
+<td>10</td>
+<td><strong>6 of 10.</strong> 4 made by Finance with no ticket</td>
+</tr>
+<tr class="even">
+<td>AD Group Policy change events</td>
+<td>5</td>
+<td>5 of 5 ✓</td>
+</tr>
+<tr class="odd">
+<td>WSUS patch deployment history</td>
+<td>5</td>
+<td>5 of 5 ✓</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Conclusion on population.</strong> Complete for IT-managed
+infrastructure. <strong>Incomplete for Ledgerline.</strong> Finance
+makes configuration changes outside the change process, so sample
+results cannot cover them. See CM-05. <strong>D-15.</strong></p>
+<h3 id="sample-test">Sample test</h3>
+<p><strong>Sample size.</strong> 25 (event-driven, over 50, elevated
+risk). Random selection, IT-320-S1.</p>
+<p><strong>Attributes tested.</strong></p>
+<ul>
+<li><strong>A.</strong> A ticket describes the change.</li>
+<li><strong>B.</strong> Approved by CAB (per minutes) or by the policy
+delegate (per email) <strong>before</strong> the implementation
+date.</li>
+</ul>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Ticket</th>
+<th>Implemented</th>
+<th>System</th>
+<th>A</th>
+<th>B</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>CHG-1107</td>
+<td>2025-11-06</td>
+<td>Firewall</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>CHG-1121</td>
+<td>2025-11-20</td>
+<td>Ledgerline</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>CHG-1204</td>
+<td>2025-12-03</td>
+<td>AD</td>
+<td>✓</td>
+<td>✗</td>
+<td>No December minutes. No email approval</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>CHG-1211</td>
+<td>2025-12-10</td>
+<td>LOS</td>
+<td>✓</td>
+<td>✓*</td>
+<td>Delegate email approval, Dec 8</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>CHG-1219</td>
+<td>2025-12-17</td>
+<td>Server patch</td>
+<td>✓</td>
+<td>✗</td>
+<td>No December minutes. No email approval</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>CHG-0108</td>
+<td>2026-01-08</td>
+<td>Ledgerline</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>CHG-0122</td>
+<td>2026-01-22</td>
+<td>Backup</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>CHG-0205</td>
+<td>2026-02-05</td>
+<td>Firewall</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>CHG-0226</td>
+<td>2026-02-26</td>
+<td>Ledgerline</td>
+<td>✓</td>
+<td>✗</td>
+<td>Approved in April CAB minutes, <strong>after</strong>
+implementation</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>CHG-0304</td>
+<td>2026-03-04</td>
+<td>AD</td>
+<td>✓</td>
+<td>✗</td>
+<td>No March minutes. No email approval</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>CHG-0318</td>
+<td>2026-03-18</td>
+<td>LOS</td>
+<td>✓</td>
+<td>✗</td>
+<td>No March minutes. No email approval</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>CHG-0325</td>
+<td>2026-03-25</td>
+<td>Server patch</td>
+<td>✓</td>
+<td>✓*</td>
+<td>Delegate email approval, Mar 23</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>CHG-0409</td>
+<td>2026-04-09</td>
+<td>Ledgerline</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>CHG-0423</td>
+<td>2026-04-23</td>
+<td>Firewall</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>CHG-0514</td>
+<td>2026-05-14</td>
+<td>Backup</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>CHG-0528</td>
+<td>2026-05-28</td>
+<td>LOS</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>CHG-0603</td>
+<td>2026-06-03</td>
+<td>Ledgerline</td>
+<td>✓</td>
+<td>✗</td>
+<td>No June minutes. No email approval</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>CHG-0617</td>
+<td>2026-06-17</td>
+<td>AD</td>
+<td>✓</td>
+<td>✗</td>
+<td>No June minutes. No email approval</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>CHG-0709</td>
+<td>2026-07-09</td>
+<td>Server patch</td>
+<td>✓</td>
+<td>✓*</td>
+<td>Delegate email approval, Jul 7</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>CHG-0722</td>
+<td>2026-07-22</td>
+<td>Firewall</td>
+<td>✓</td>
+<td>✗</td>
+<td>No July minutes. No email approval</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>CHG-0813</td>
+<td>2026-08-13</td>
+<td>Ledgerline</td>
+<td>✓</td>
+<td>✗</td>
+<td>No August minutes. No email approval</td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td>CHG-0827</td>
+<td>2026-08-27</td>
+<td>LOS</td>
+<td>✓</td>
+<td>✗</td>
+<td>No August minutes. No email approval</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td>CHG-0910</td>
+<td>2026-09-10</td>
+<td>AD</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td>CHG-0924</td>
+<td>2026-09-24</td>
+<td>Ledgerline</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>CHG-1015</td>
+<td>2026-10-15</td>
+<td>Server patch</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Results.</strong> Attribute A: 25 of 25 ✓. Attribute B:
+<strong>10 exceptions.</strong> 9 in the five months with no CAB minutes
+(Dec, Mar, Jun, Jul, Aug) and no delegate email. 1 approved after
+implementation.</p>
+<p><strong>Root cause (inquiry of Manager, IT Infrastructure, Nov
+24).</strong> The CAB secretary was on leave in those months and no
+alternate was assigned. Meetings were held on some of those dates, but
+nothing was recorded. An approval that is not evidenced cannot be relied
+on.</p>
+<p><strong>Conclusion.</strong> <strong>Control did not operate
+effectively.</strong> 10 of 25 against an expectation of zero. Sample
+not extended. <strong>D-14.</strong></p>
+<hr />
+<h2 id="cm-03-changes-tested-before-implementation">CM-03 Changes tested
+before implementation</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control objective</strong></td>
+<td>Changes are tested and accepted before implementation, with evidence
+retained</td>
+</tr>
+<tr class="even">
+<td><strong>Test of design</strong></td>
+<td>Inquiry (Nov 24). Inspected the 25 CM-02 sample tickets for test
+evidence: <strong>0 of 25</strong> contain UAT sign-off. The ticket tool
+has no testing field. The business unit confirms testing verbally</td>
+</tr>
+<tr class="odd">
+<td><strong>Conclusion</strong></td>
+<td><strong>Design ineffective.</strong> No mechanism to record or
+retain testing evidence. Consistent with IT-200 CUEC 11</td>
+</tr>
+<tr class="even">
+<td><strong>Deficiency</strong></td>
+<td>D-08, extended from Keystone to all systems</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="cm-04-emergency-changes">CM-04 Emergency changes</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control objective</strong></td>
+<td>Urgent changes made outside the normal process are logged, justified
+and approved after the fact</td>
+</tr>
+<tr class="even">
+<td><strong>Test of design</strong></td>
+<td>Change Policy has no emergency change section. No retrospective
+approval step exists</td>
+</tr>
+<tr class="odd">
+<td><strong>Population</strong></td>
+<td>4 emergency changes identified in FY2026: service desk log, plus
+Northline exception E2. All 4 reviewed</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Date</th>
+<th>System</th>
+<th>Change</th>
+<th>Retro approval</th>
+<th>Financially relevant</th>
+<th>Impact procedure</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EC1</td>
+<td>Jan 14, 2026</td>
+<td>Keystone</td>
+<td>Loan interest calculation parameter changed on a telephone
+instruction</td>
+<td>✗</td>
+<td><strong>Yes</strong></td>
+<td>Financial audit team recalculated interest on 25 affected loans from
+Jan 14 to Oct 31</td>
+<td>25 of 25 agreed. Change was correct</td>
+</tr>
+<tr class="even">
+<td>EC2</td>
+<td>Mar 9, 2026</td>
+<td>Firewall</td>
+<td>Inbound rule opened for LOS vendor support. Left open 6 weeks</td>
+<td>✗</td>
+<td>No</td>
+<td>None required. Security observation to management</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>EC3</td>
+<td>Jun 11, 2026</td>
+<td>Ledgerline</td>
+<td>Finance analyst edited the Keystone-to-Ledgerline GL import job
+after a failed load</td>
+<td>✗</td>
+<td><strong>Yes</strong></td>
+<td>Agreed June Keystone GL totals by account to Ledgerline</td>
+<td>Agreed ✓</td>
+</tr>
+<tr class="even">
+<td>EC4</td>
+<td>Sep 3, 2026</td>
+<td>AD</td>
+<td>Group Policy rolled back after branch login outage</td>
+<td>✗</td>
+<td>No</td>
+<td>None required</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Conclusion.</strong> No emergency change process. 4 of 4 not
+approved after the fact. Two affected financial processing. The impact
+procedures found no misstatement. <strong>D-16.</strong></p>
+<hr />
+<h2 id="cm-05-ledgerline-configuration-segregation-of-duties">CM-05
+Ledgerline configuration: segregation of duties</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control objective</strong></td>
+<td>Changes to account mapping, consolidation rules and approval
+workflows are independently approved</td>
+</tr>
+<tr class="even">
+<td><strong>Test of design</strong></td>
+<td>Inspected Ledgerline roles: 2 finance staff hold both configuration
+and approval rights. No workflow requires a second approver</td>
+</tr>
+<tr class="odd">
+<td><strong>Conclusion on design</strong></td>
+<td><strong>Ineffective</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Impact</strong></td>
+<td>Ledgerline configuration audit log, FY2026: 37 changes. 29 by the 2
+users, all self-approved. 12 affected account mapping or consolidation
+rules</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="compensating-control">Compensating control</h3>
+<p>A <strong>compensating control</strong> covers the same risk in a
+different way. Management identified one.</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control</strong></td>
+<td>Monthly reconciliation of the Ledgerline trial balance to the
+Keystone general ledger, by account. Prepared by a Senior Accountant,
+reviewed and signed by the Finance Manager within 10 business days of
+month end</td>
+</tr>
+<tr class="even">
+<td><strong>Test of design</strong></td>
+<td>Walkthrough of the September reconciliation. Detects differences in
+<strong>account balances</strong> between Keystone and Ledgerline.
+<strong>Does not detect</strong> an account mapped to the wrong
+financial statement line, because a mis-mapped account still reconciles
+by balance</td>
+</tr>
+<tr class="odd">
+<td><strong>Operating effectiveness</strong></td>
+<td>5 of 12 months, random (Dec, Feb, May, Jul, Oct). Attributes:
+prepared, differences explained, reviewed and signed within 10 business
+days</td>
+</tr>
+<tr class="even">
+<td><strong>Results</strong></td>
+<td>5 of 5 ✓</td>
+</tr>
+<tr class="odd">
+<td><strong>Conclusion</strong></td>
+<td><strong>Effective for accuracy</strong> of balances. <strong>Not a
+compensating control for classification</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3
+id="classification-risk-referred-to-the-financial-audit-team">Classification
+risk: referred to the financial audit team</h3>
+<p>Year-end review of Ledgerline mapping of every GL account to
+financial statement lines. <strong>Result (Nov 26):</strong> one
+account, <em>Accrued interest payable on member deposits</em> ($1.9M),
+mapped to "Other liabilities" instead of "Member deposits" after a
+mapping change on Feb 26, 2026 (CM-02 sample item 9). <strong>Management
+corrected the classification.</strong> No effect on net income.</p>
+<p><strong>Conclusion.</strong> The segregation failure produced a
+classification misstatement above overall materiality. The client's
+controls did not detect it. The auditor did. <strong>D-13.</strong></p>
+<hr />
+<h2 id="cm-06-changes-to-reports-used-in-financial-reporting">CM-06
+Changes to reports used in financial reporting</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control objective</strong></td>
+<td>Reports relied on in financial reporting are changed only under
+control</td>
+</tr>
+<tr class="even">
+<td><strong>Population</strong></td>
+<td>14 Power BI and SQL reports. Inquiry of Finance and IT (Nov 24): 12
+are management or board reporting only. <strong>2 feed financial
+reporting:</strong> (1) ECL staging report, a SQL query on a Keystone
+data extract used in the expected credit loss model. (2) Monthly deposit
+interest accrual analysis used in a Finance review control</td>
+</tr>
+<tr class="odd">
+<td><strong>Test of design</strong></td>
+<td>No version control, no change tickets, no testing, no restriction on
+who can edit. Query text is stored on a shared drive editable by 6
+users</td>
+</tr>
+<tr class="even">
+<td><strong>Conclusion</strong></td>
+<td><strong>No control.</strong> ITGCs cannot support reliance on either
+report. Financial audit team to test both directly: re-run the queries
+against Keystone data and agree a sample of output lines to source</td>
+</tr>
+<tr class="odd">
+<td><strong>Deficiency</strong></td>
+<td><strong>D-17</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="cm-07-keystone-release-review-and-acceptance-cuec-13">CM-07
+Keystone release review and acceptance (CUEC 13)</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Control objective</strong></td>
+<td>Lakeridge reviews and tests Keystone releases before Northline
+implements them</td>
+</tr>
+<tr class="even">
+<td><strong>Control description</strong></td>
+<td>Northline's portal requires a client sign-off for each release.
+Application Support lead reviews release notes, runs Lakeridge test
+scripts in Northline's test environment, and signs off in the
+portal</td>
+</tr>
+<tr class="odd">
+<td><strong>Test of design</strong></td>
+<td>Walkthrough of release 2026.2 (Aug 2026). Design effective</td>
+</tr>
+<tr class="even">
+<td><strong>Operating effectiveness</strong></td>
+<td>Full population: 2 releases in FY2026</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Release</th>
+<th>Release notes reviewed</th>
+<th>Test scripts run</th>
+<th>Portal sign-off before go-live</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2026.1 (Mar 2026)</td>
+<td>✓</td>
+<td>✓ 10 amortization scenarios compared to expected results, including
+the rounding change</td>
+<td>✓ Mar 6. Go-live Mar 14</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2026.2 (Aug 2026)</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓ Aug 12. Go-live Aug 22</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Conclusion.</strong> <strong>Effective.</strong> Closes CUEC
+13 in IT-200. The Keystone Systems carve-out for code development
+remains open (IT-200 Part D), but Lakeridge's testing of release 2026.1
+provides partial evidence that the amortization change works as
+intended.</p>
+<hr />
+<h2 id="domain-conclusion">Domain conclusion</h2>
+<p>Change management is <strong>not effective</strong> for FY2026. Of
+seven controls, five are ineffective in design, one did not operate, and
+one (Keystone release acceptance) is effective.</p>
+<p>Two findings stand out for Deliverable 4:</p>
+<ol type="1">
+<li><strong>The Ledgerline mapping error</strong> ($1.9M classification,
+above materiality) was caused by a control failure and was found by the
+auditor, not the client.</li>
+<li><strong>The NSF fee exception</strong> ($4,200) is trivial in amount
+but shows an unauthorized change went undetected for seven months.</li>
+</ol>
+<p><strong>Communicated to engagement team (Nov 26, 2026):</strong>
+change ITGCs do not support reliance on Keystone configuration,
+Ledgerline configuration or the two financial reports. Substantive
+procedures performed as noted above.</p>
+<h2 id="deficiencies-carried-to-it-900">Deficiencies carried to
+IT-900</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Ref</th>
+<th>Deficiency</th>
+<th>Type</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D-04</td>
+<td>Keystone configuration changes not independently approved</td>
+<td>Design</td>
+<td>From IT-200. Impact quantified (F1, EC1)</td>
+</tr>
+<tr class="even">
+<td>D-08</td>
+<td>Testing evidence not retained, all systems</td>
+<td>Design</td>
+<td>Extended</td>
+</tr>
+<tr class="odd">
+<td>D-13</td>
+<td>Ledgerline configuration changes self-approved. Caused $1.9M
+classification misstatement</td>
+<td>Design</td>
+<td><strong>New</strong></td>
+</tr>
+<tr class="even">
+<td>D-14</td>
+<td>Change approval not evidenced. 10 of 25 exceptions</td>
+<td>Operating</td>
+<td><strong>New</strong></td>
+</tr>
+<tr class="odd">
+<td>D-15</td>
+<td>Ledgerline changes made outside the change process</td>
+<td>Design</td>
+<td><strong>New</strong></td>
+</tr>
+<tr class="even">
+<td>D-16</td>
+<td>No emergency change process. 4 of 4 unapproved</td>
+<td>Design</td>
+<td><strong>New</strong></td>
+</tr>
+<tr class="odd">
+<td>D-17</td>
+<td>No change control over reports used in financial reporting</td>
+<td>Design</td>
+<td><strong>New</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p class="muted" style="margin-top:48px"><a href="index.html">Back to the case study</a></p>
+</main>
+</body>
+</html>

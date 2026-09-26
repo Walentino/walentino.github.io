@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IT-100 Scoping memo | Adewale Odeja</title>
+<meta name="description" content="Simulated ITGC engagement workpaper by Adewale Odeja, CISA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Adewale Odeja, CISA</a>
+  <ul><li><a class="link" href="index.html">Lakeridge case study</a></li><li><a class="link" href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="doc">
+<p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Lakeridge ITGC engagement</a> / IT-100
+Scoping memo</p>
+<h1 id="it-100-itgc-scoping-memorandum">IT-100 ITGC Scoping
+Memorandum</h1>
+<h2
+id="lakeridge-community-credit-union-ltd--fiscal-year-ended-october-31-2026">Lakeridge
+Community Credit Union Ltd. | Fiscal year ended October 31, 2026</h2>
+<blockquote>
+<p><strong>Simulated engagement.</strong> The organization, systems,
+service providers and observations are constructed for training. No
+assessment of a live environment was performed. Service provider and
+product names (Northline, Keystone, Lakeshore Central, Ledgerline) are
+fictional.</p>
+</blockquote>
+<div class="tbl"><table>
+<tbody>
+<tr class="odd">
+<td><strong>Prepared by / date</strong></td>
+<td>A. Odeja / September 28, 2026</td>
+</tr>
+<tr class="even">
+<td><strong>Reviewed by / date</strong></td>
+<td>[Engagement manager] / [date]</td>
+</tr>
+<tr class="odd">
+<td><strong>Our role</strong></td>
+<td>IT audit team supporting the external audit of Lakeridge's FY2026
+financial statements</td>
+</tr>
+<tr class="even">
+<td><strong>Standards</strong></td>
+<td>CAS 315 (risk assessment), CAS 330 (responses to risk), CAS 402
+(service organizations), CAS 500 (audit evidence, including information
+produced by the entity), CAS 530 (sampling), CAS 265 (communicating
+deficiencies)</td>
+</tr>
+<tr class="odd">
+<td><strong>Service auditor standard</strong></td>
+<td>CSAE 3416</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This memo sets out which applications and IT processes we will test,
+which we exclude and why, how we will obtain evidence over systems
+Lakeridge does not operate, and how we will select samples. Scope is
+driven by what the audit plans to rely on, not by the systems
+inventory.</p>
+<h2 id="2-entity">2. Entity</h2>
+<p>Lakeridge is an Ontario credit union under the <em>Credit Unions and
+Caisses Populaires Act, 2020</em>, regulated by FSRA. It has $2.1B in
+assets, 48,000 members, 14 branches and 240 staff. It reports under
+IFRS. Year end is October 31.</p>
+<p><strong>The defining feature:</strong> Lakeridge does not operate its
+core banking system. Keystone is hosted and operated by Northline. This
+shapes most of the approach (section 7).</p>
+<h2 id="3-materiality">3. Materiality</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th>Amount</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Benchmark: pre-tax income, FY2026 forecast</td>
+<td>$11.0M</td>
+<td>Primary measure of performance for members and the Board</td>
+</tr>
+<tr class="even">
+<td><strong>Overall materiality</strong></td>
+<td><strong>$550K</strong></td>
+<td>5% of pre-tax income</td>
+</tr>
+<tr class="odd">
+<td><strong>Performance materiality</strong></td>
+<td><strong>$360K</strong></td>
+<td>65% of overall. Elevated because of known control weaknesses</td>
+</tr>
+<tr class="even">
+<td><strong>Clearly trivial</strong></td>
+<td><strong>$27K</strong></td>
+<td>5% of overall</td>
+</tr>
+</tbody>
+</table></div>
+<p>Total assets were considered and rejected. 0.5% of assets gives about
+$10.5M, which is too high to detect errors that matter to users.</p>
+<h2 id="4-significant-accounts-and-assertions">4. Significant accounts
+and assertions</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Account</th>
+<th>Balance / activity</th>
+<th>Key assertions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Member deposits</td>
+<td>$1.74B</td>
+<td>Completeness, existence, accuracy</td>
+</tr>
+<tr class="even">
+<td>Consumer and mortgage loans</td>
+<td>$1.62B</td>
+<td>Existence, accuracy, valuation</td>
+</tr>
+<tr class="odd">
+<td>Commercial loans</td>
+<td>$340M</td>
+<td>Existence, valuation (largely manual credit files)</td>
+</tr>
+<tr class="even">
+<td>Allowance for expected credit losses (IFRS 9)</td>
+<td>Estimate</td>
+<td>Valuation. <strong>Significant risk</strong></td>
+</tr>
+<tr class="odd">
+<td>Interest income and interest expense</td>
+<td>P&amp;L</td>
+<td>Accuracy, completeness, cut-off</td>
+</tr>
+<tr class="even">
+<td>Fee income</td>
+<td>P&amp;L</td>
+<td>Accuracy, occurrence</td>
+</tr>
+<tr class="odd">
+<td>Cash, settlement and clearing accounts</td>
+<td>Balance sheet</td>
+<td>Existence, completeness</td>
+</tr>
+<tr class="even">
+<td>Investments and borrowings</td>
+<td>Balance sheet</td>
+<td>Existence, valuation</td>
+</tr>
+</tbody>
+</table></div>
+<p>Wealth ($290M AUA, referral only) and credit cards (third-party
+issuer, agent model) are off balance sheet and excluded.</p>
+<h2 id="5-what-the-audit-plans-to-rely-on">5. What the audit plans to
+rely on</h2>
+<p>ITGCs matter only because of the automated controls, IT-dependent
+manual controls and reports below. If the audit went fully substantive
+for an account, ITGCs over that system would not be needed.</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Application</th>
+<th>Relied-upon item</th>
+<th>Type</th>
+<th>Account / assertion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Keystone</td>
+<td>Interest accrual calculation</td>
+<td>Automated control</td>
+<td>Interest income and expense, accuracy</td>
+</tr>
+<tr class="even">
+<td>Keystone</td>
+<td>Loan amortization calculation</td>
+<td>Automated control</td>
+<td>Loans, accuracy</td>
+</tr>
+<tr class="odd">
+<td>Keystone</td>
+<td>Transaction posting to the general ledger</td>
+<td>Automated control</td>
+<td>All balances, completeness</td>
+</tr>
+<tr class="even">
+<td>Keystone</td>
+<td>Delinquency aging report</td>
+<td>Report (IPE) used in ECL</td>
+<td>ECL, valuation</td>
+</tr>
+<tr class="odd">
+<td>Keystone / LOS</td>
+<td>Loan boarding interface and reject handling</td>
+<td>Interface, IT-dependent manual control</td>
+<td>Loans, completeness, accuracy</td>
+</tr>
+<tr class="even">
+<td>Ledgerline</td>
+<td>GL-to-financial-statement mapping and consolidation</td>
+<td>Automated control / configuration</td>
+<td>All lines, classification</td>
+</tr>
+<tr class="odd">
+<td>Ledgerline</td>
+<td>Journal entry listing</td>
+<td>Report (IPE) for journal entry testing</td>
+<td>Fraud risk (CAS 240)</td>
+</tr>
+<tr class="even">
+<td>SQL / Power BI</td>
+<td>ECL staging report</td>
+<td>Report (IPE), end-user computing</td>
+<td>ECL, valuation</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="6-applications-in-scope-and-out-of-scope">6. Applications in
+scope and out of scope</h2>
+<h3 id="in-scope">In scope</h3>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Application</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Keystone core banking</strong></td>
+<td>System of record for deposits, loans, interest and the GL. Hosts
+most relied-upon items</td>
+</tr>
+<tr class="even">
+<td><strong>Ledgerline</strong></td>
+<td>Produces the financial statements. Mapping and consolidation sit
+here</td>
+</tr>
+<tr class="odd">
+<td><strong>Loan origination system (LOS)</strong></td>
+<td>Loan terms originate here and pass to Keystone. Keystone does not
+re-derive them</td>
+</tr>
+<tr class="even">
+<td><strong>Reports used in financial reporting</strong></td>
+<td>ECL staging report and deposit interest analysis</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="out-of-scope">Out of scope</h3>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Application</th>
+<th>Basis for exclusion</th>
+<th>What covers the risk instead</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Lakeshore Central digital banking</strong></td>
+<td>A channel. Balances are held and posted in Keystone. The engagement
+scope listed it; <strong>we override that listing</strong> for the
+reasons here</td>
+<td>Daily reconciliation of Lakeshore Central settlement and clearing
+reports to Keystone GL clearing accounts, <strong>tested by the
+financial audit team</strong>. Lakeshore Central's SOC 2 is not relied
+on: it is not designed for financial reporting and covers only 2 of 12
+months. If the reconciliation fails, digital banking comes into
+scope</td>
+</tr>
+<tr class="even">
+<td>AML platform</td>
+<td>AML compliance. No balances</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Card issuing partner, wealth platform</td>
+<td>Off balance sheet</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>ATM platform</td>
+<td>Cash recorded in Keystone after daily reconciliation</td>
+<td>ATM cash reconciliation, financial audit team</td>
+</tr>
+<tr class="odd">
+<td>Microsoft 365 / Entra ID</td>
+<td>Supporting only</td>
+<td>Considered only where it authenticates in-scope applications</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="itgc-domains-by-application">ITGC domains by application</h3>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Access</th>
+<th>Change management</th>
+<th>Program development</th>
+<th>Computer operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Keystone</strong></td>
+<td>Lakeridge: authorize, review, terminate (CUECs). Northline: SOC 1
+CO1</td>
+<td>Lakeridge: approve and test (CUECs). Northline: CO2, CO3. Keystone
+Systems: carved out</td>
+<td>Not performed by Lakeridge</td>
+<td>Lakeridge: review outputs (CUECs). Northline: CO4, CO5</td>
+</tr>
+<tr class="even">
+<td><strong>Ledgerline</strong></td>
+<td>Lakeridge: test</td>
+<td>Lakeridge configuration: test. Vendor code: vendor SOC 1 to be
+obtained</td>
+<td>None expected. Confirm</td>
+<td>Import job monitoring</td>
+</tr>
+<tr class="odd">
+<td><strong>LOS</strong></td>
+<td>Lakeridge: test</td>
+<td>Lakeridge configuration: test</td>
+<td>None expected. Confirm</td>
+<td>Interface to Keystone: test</td>
+</tr>
+<tr class="even">
+<td><strong>Reports</strong></td>
+<td>Editing rights</td>
+<td>Change control: test</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div>
+<p>Backup and restore are <strong>not relied upon</strong>. They protect
+availability, not accuracy. Findings go to the management letter as
+observations.</p>
+<h2 id="7-service-organizations-cas-402">7. Service organizations (CAS
+402)</h2>
+<h3 id="71-northline-keystone-hosting">7.1 Northline (Keystone
+hosting)</h3>
+<p>We will rely on Northline's SOC 1 Type II (CSAE 3416) for <strong>Nov
+1, 2025 to Sep 30, 2026</strong>, expected in late October 2026. The
+prior-year report was received in December 2025 and never reviewed.</p>
+<p>We will:</p>
+<ol type="1">
+<li>Confirm the report type, period, and the services covered against
+Lakeridge's use.</li>
+<li>Evaluate the service auditor's competence and independence.</li>
+<li>Read the opinion. Read every exception on control objectives we rely
+on, and ask Northline whether each affected Lakeridge.</li>
+<li>Identify subservice organizations and whether they are inclusive or
+carved out. <strong>Keystone Systems (Keystone code development) is
+expected to be carved out.</strong> If so: obtain Keystone Systems' own
+report, or identify releases that changed relied-upon functions and have
+them retested.</li>
+<li>Extract the CUECs, map them to control objectives, and identify and
+test the Lakeridge control that satisfies each relevant one (Deliverable
+2).</li>
+</ol>
+<p><strong>Expected result, stated now.</strong> Preliminary inquiry
+shows Lakeridge has no process for any of the 19 CUECs. We expect CUECs
+over access, configuration change and batch output to fail. If
+confirmed, the Keystone control objectives will not be achieved for
+Lakeridge, regardless of Northline's opinion. We will tell the
+engagement team at once, so substantive procedures over interest,
+balances and Keystone reports can be planned.</p>
+<h3 id="72-other-providers">7.2 Other providers</h3>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Provider</th>
+<th>Report</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ledgerline vendor</td>
+<td>SOC 1 to be obtained</td>
+<td>Vendor-side code changes. Lakeridge-side configuration tested
+directly</td>
+</tr>
+<tr class="even">
+<td>LOS vendor</td>
+<td>SOC 2 requested, not received. SOC 2 not designed for financial
+reporting</td>
+<td>Rely instead on Lakeridge's LOS-to-Keystone boarding reconciliation,
+tested directly</td>
+</tr>
+<tr class="odd">
+<td>Lakeshore Central, AML platform, Microsoft</td>
+<td>Not relied on</td>
+<td>See section 6</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="8-the-october-gap-period">8. The October gap period</h2>
+<p>Northline's report ends Sep 30. Year end is Oct 31. We will
+<strong>obtain a bridge letter and perform roll-forward procedures
+together</strong>. They are not alternatives:</p>
+<ul>
+<li>A bridge letter is Northline management's statement that nothing
+changed. It is not tested evidence.</li>
+<li>The roll-forward is our own work: inquiry of Northline about October
+changes, inspection of Lakeridge's October change and incident records,
+and testing of Lakeridge's CUECs through October.</li>
+</ul>
+<p><strong>Sufficient only if:</strong> the opinion is unmodified, no
+exception affects our reliance, and no October changes are found.
+<strong>If any condition fails:</strong> no reliance on Northline's
+controls for October. The engagement team extends substantive procedures
+for that month.</p>
+<p><strong>Note:</strong> where the audit cannot rely on controls, the
+response is a change in audit strategy, not a "scope limitation." A
+scope limitation (CAS 705) means we could not obtain sufficient evidence
+at all.</p>
+<h2 id="9-information-produced-by-the-entity-ipe">9. Information
+produced by the entity (IPE)</h2>
+<p>Every system report used as evidence, or used inside a control we
+rely on, will be tested for completeness and accuracy. If ITGCs over the
+source system fail, we test the report directly (re-run it, agree totals
+to source, trace a sample to documents).</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Report</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Keystone user listing (from Northline)</td>
+<td>Access populations</td>
+</tr>
+<tr class="even">
+<td>HR termination report</td>
+<td>Termination population</td>
+</tr>
+<tr class="odd">
+<td>Change logs: service desk, Northline tickets, Ledgerline audit
+log</td>
+<td>Change populations. <strong>Completeness tested in reverse</strong>,
+from system logs back to tickets</td>
+</tr>
+<tr class="even">
+<td>Keystone delinquency aging, ECL staging report</td>
+<td>ECL</td>
+</tr>
+<tr class="odd">
+<td>LOS funded loans and Keystone new loans boarded</td>
+<td>Boarding reconciliation</td>
+</tr>
+<tr class="even">
+<td>Ledgerline journal entry listing</td>
+<td>Journal entry testing</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="10-sampling">10. Sampling</h2>
+<p>These are <strong>firm conventions</strong>, not ISACA requirements.
+ITAF provides the sampling process: define the objective and population,
+establish completeness, select, evaluate, conclude.</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Control frequency or population</th>
+<th>Sample (elevated risk)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daily, or many times daily</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td>Weekly</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>Monthly</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>Quarterly</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Annual</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Event-driven, over 50 items</td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td>Event-driven, 10 or fewer</td>
+<td>All</td>
+</tr>
+<tr class="even">
+<td>Configured system setting</td>
+<td>1, if change management over the setting is effective</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Rules set in advance:</strong></p>
+<ul>
+<li>Random selection, documented and reproducible.</li>
+<li><strong>Terminations: test all</strong>, given the October 2025
+teller incident.</li>
+<li><strong>Emergency changes: test all four.</strong></li>
+<li><strong>Expected deviations: zero.</strong> An exception is
+investigated for root cause. We do not extend a sample to test our way
+out of it.</li>
+<li>A control that did not operate in the period is not sampled. It is
+concluded on directly.</li>
+</ul>
+<h2 id="11-known-conditions-affecting-planning">11. Known conditions
+affecting planning</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>Domain</th>
+<th>Planning implication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No access review since May 2024</td>
+<td>Access</td>
+<td>Control did not operate. Conclude directly. No sample</td>
+</tr>
+<tr class="even">
+<td>Shared <code>svc_admin</code> holds Domain Admin <strong>and
+Keystone access</strong>. Used to change a member record, Apr 2026,
+unattributable</td>
+<td>Access</td>
+<td>Fraud risk (CAS 240). Impact assessment on the April change</td>
+</tr>
+<tr class="odd">
+<td>2 staff can initiate and approve member data corrections in
+Keystone</td>
+<td>Access, SoD</td>
+<td>Fraud risk. Filter the full correction log for self-approval</td>
+</tr>
+<tr class="even">
+<td>Teller retained Keystone access 34 days, 2 logins</td>
+<td>Access</td>
+<td>Test all terminations. Refer logins to audit team</td>
+</tr>
+<tr class="odd">
+<td>No MFA on Keystone, LOS or domain login. Weak AD password
+policy</td>
+<td>Access</td>
+<td>Inspect settings</td>
+</tr>
+<tr class="even">
+<td>Loan interest calculation changed on a verbal instruction, Jan
+2026</td>
+<td>Change</td>
+<td>Audit team recalculates affected interest. Ask Northline if it
+appears as a SOC exception</td>
+</tr>
+<tr class="odd">
+<td>4 emergency changes, none approved after the fact</td>
+<td>Change</td>
+<td>Test all 4</td>
+</tr>
+<tr class="even">
+<td>CAB minutes for 7 of 12 months. UAT sign-off not retained</td>
+<td>Change</td>
+<td>Expect approval and testing exceptions</td>
+</tr>
+<tr class="odd">
+<td>2 finance staff can make and approve Ledgerline configuration
+changes</td>
+<td>Change, SoD</td>
+<td>Design deficiency. Look for a compensating control. Check which
+assertion it covers</td>
+</tr>
+<tr class="even">
+<td>14 Power BI and SQL reports, no change control</td>
+<td>Change, IPE</td>
+<td>Identify which feed financial reporting. Test those directly</td>
+</tr>
+<tr class="odd">
+<td>Keystone end-of-day exception reports never reviewed</td>
+<td>Operations (CUEC 5, 14)</td>
+<td>Inspect reports. Ask audit team to analyse suspense balances</td>
+</tr>
+<tr class="even">
+<td>ISO reports to VP Technology. IT internal audit not performed since
+2023</td>
+<td>Entity level</td>
+<td>Limits reliance on management self-assessment</td>
+</tr>
+<tr class="odd">
+<td>Board told SOC reports were "on file" (Jun 2026)</td>
+<td>Entity level</td>
+<td>Control environment. Relevant to deficiency evaluation</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="12-open-items">12. Open items</h2>
+<ol type="1">
+<li>Northline FY2026 SOC 1 report (expected late October).</li>
+<li>Bridge letter covering October 2026.</li>
+<li>Keystone Systems report, or list of FY2026 Keystone releases.</li>
+<li>Ledgerline SOC 1.</li>
+<li>Confirmation of the Lakeshore Central settlement reconciliation by
+the financial audit team.</li>
+</ol>
+<h2 id="13-conclusion">13. Conclusion</h2>
+<p>In scope: Keystone, Ledgerline, the LOS and two financial reports.
+Excluded: digital banking, AML, off-balance-sheet platforms and ATM
+management, each with the control that covers the risk. Reliance on
+Northline depends on the report, the gap-period procedures and
+Lakeridge's CUECs. We expect Lakeridge's CUECs to fail, and have told
+the engagement team to plan substantive work accordingly.</p>
+<p class="muted" style="margin-top:48px"><a href="index.html">Back to the case study</a></p>
+</main>
+</body>
+</html>
