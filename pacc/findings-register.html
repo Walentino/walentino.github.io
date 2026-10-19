@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Findings register | Adewale Odeja</title>
+<meta name="description" content="Simulated SME controls and compliance review of a fictional Ontario church, by Adewale Odeja, CISA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Adewale Odeja, CISA</a>
+  <ul><li><a class="link" href="index.html">PACC case study</a></li><li><a class="link" href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="doc">
+<p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">PACC controls and compliance review</a> / Findings
+register</p>
+<h1 id="fr-01-findings-register">FR-01 Findings Register</h1>
+<h2
+id="port-alder-community-church--advisory-engagement-ao-2026-001">Port
+Alder Community Church | Advisory engagement AO-2026-001</h2>
+<blockquote>
+<p><strong>Constructed scenario.</strong> The church, vendors and people
+are fictional. Advisory engagement: findings describe conditions
+observed during fieldwork. They are not an audit opinion and provide no
+assurance. Ratings shown are final, after the draft findings meeting
+with management on December 10, 2026.</p>
+</blockquote>
+<h2 id="1-rating-scale">1. Rating scale</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Rating</th>
+<th>Meaning</th>
+<th>Expected response</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Critical</strong></td>
+<td>Harm to donors or the church has occurred or is likely now, or a
+legal or contractual obligation is being breached</td>
+<td>Act immediately. Board chair informed</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>A significant loss, exposure or breach could happen and would
+probably not be detected promptly</td>
+<td>Fix within 90 days, with board oversight</td>
+</tr>
+<tr class="odd">
+<td><strong>Medium</strong></td>
+<td>A weakness that matters, but other factors limit likelihood or
+impact</td>
+<td>Fix within 6 months</td>
+</tr>
+<tr class="even">
+<td><strong>Low</strong></td>
+<td>Good practice improvement</td>
+<td>Fix when practical</td>
+</tr>
+</tbody>
+</table></div>
+<p>Detection weighs most. In an organisation with four staff, where
+duties cannot be separated, a problem nobody would notice is rated
+higher than the same problem a regular check would catch.</p>
+<h2 id="2-summary">2. Summary</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Finding</th>
+<th>Rating</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F1</td>
+<td>Card data stored on the website server</td>
+<td><strong>Critical</strong></td>
+<td>PCI DSS 4.0.1 req. 3.3.1, 3.5.1; merchant agreement</td>
+</tr>
+<tr class="even">
+<td>F2</td>
+<td>Website card giving under SAQ D without the required controls</td>
+<td>High</td>
+<td>PCI DSS 4.0.1 req. 6.3.3, 6.4.3, 11.6.1, 11.3.2, 12.8</td>
+</tr>
+<tr class="odd">
+<td>F3</td>
+<td>Domain, DNS and hosting held personally by a former volunteer</td>
+<td>High</td>
+<td>Ownership of critical assets</td>
+</tr>
+<tr class="even">
+<td>F4</td>
+<td>Refunds: shared login, no approval, credits to any card</td>
+<td>High</td>
+<td>Individual accountability; independent review</td>
+</tr>
+<tr class="odd">
+<td>F5</td>
+<td>Offering custody and count</td>
+<td>High</td>
+<td>Dual custody of cash</td>
+</tr>
+<tr class="even">
+<td>F6</td>
+<td>No reconciliation of giving records to count, processor and
+books</td>
+<td>High</td>
+<td>Records used for receipting reconciled to accounts</td>
+</tr>
+<tr class="odd">
+<td>F7</td>
+<td>Shared administrator accounts; no leaver process</td>
+<td>High</td>
+<td>Named accounts, least privilege, timely removal</td>
+</tr>
+<tr class="even">
+<td>F8</td>
+<td>Email impersonation and payment change verification</td>
+<td>Medium (lowered from High)</td>
+<td>SPF (RFC 7208), DKIM, DMARC (RFC 7489)</td>
+</tr>
+<tr class="odd">
+<td>F9</td>
+<td>Receipts: template gaps; paid events receipted as gifts</td>
+<td>Medium</td>
+<td>Income Tax Regulations s. 3501; CRA split receipting</td>
+</tr>
+<tr class="even">
+<td>F10</td>
+<td>Vulnerable sector screening: lapsed checks; record handling</td>
+<td>High</td>
+<td>Church policy; PIPEDA principles 4.5, 4.7 as benchmark</td>
+</tr>
+<tr class="odd">
+<td>F11</td>
+<td>Privacy notice contradicted by trackers on sensitive pages</td>
+<td>Medium</td>
+<td>PIPEDA principles as benchmark</td>
+</tr>
+<tr class="even">
+<td>F12</td>
+<td>No church-held copy of giving or accounting records</td>
+<td>Medium</td>
+<td>Recoverability</td>
+</tr>
+<tr class="odd">
+<td>F13</td>
+<td>Foyer terminal: refund code on a label; no tamper checks</td>
+<td>Medium</td>
+<td>PCI DSS 4.0.1 req. 9.5.1</td>
+</tr>
+<tr class="even">
+<td>F14</td>
+<td>Board receives too little to detect a problem</td>
+<td>Medium</td>
+<td>ONCA director duties; oversight</td>
+</tr>
+<tr class="odd">
+<td>F15</td>
+<td>Fraud loss paid from the benevolence fund; insurer not notified</td>
+<td>Low</td>
+<td>Restricted funds; policy conditions</td>
+</tr>
+<tr class="even">
+<td>F16</td>
+<td>2024 T3010 filed nine days late</td>
+<td>Low</td>
+<td>Income Tax Act filing deadline</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Totals:</strong> 1 Critical, 7 High, 6 Medium, 2 Low.</p>
+<h2 id="3-selected-findings-in-full">3. Selected findings in full</h2>
+<h3 id="f1-card-data-stored-on-the-website-server--critical">F1. Card
+data stored on the website server · Critical</h3>
+<ul>
+<li><strong>Condition.</strong> A setting in the donation plugin wrote
+214 failed payment attempts, including full card number, expiry and
+security code, to two files in a publicly reachable folder on the shared
+web server, from April 29, 2025 to December 6, 2026.</li>
+<li><strong>Criteria.</strong> PCI DSS 4.0.1 requirement 3.3.1 (security
+codes must not be kept after authorisation) and 3.5.1 (stored card
+numbers must be unreadable); Lakeport merchant agreement.</li>
+<li><strong>Cause.</strong> The plugin falls back to sending card data
+to the server when the processor's script fails to load. Logging appears
+to have been enabled during the vendor's own support work. No one at the
+church was responsible for the website, and no one reviewed its
+settings.</li>
+<li><strong>Effect.</strong> Possible exposure of donors' card data for
+about 19 months. Access before the host's 14 days of retained logs
+cannot be ruled out. Possible forensic costs and card brand assessments
+passed on by the processor; loss of donor trust.</li>
+<li><strong>Recommendation.</strong> Follow the processor's instructions
+in full. Do not delete the files until the processor and counsel agree.
+Do not return card entry to the website until F2's recommendation is in
+place. Follow counsel's advice on notifying donors.</li>
+<li><strong>Response.</strong> Contained December 8: logging disabled in
+7 minutes, public access blocked in 24, files preserved. Chair, insurer,
+counsel and processor informed the same day. Processor's assessment
+still open at report date.</li>
+</ul>
+<h3
+id="f4-refunds-shared-login-no-approval-credits-to-any-card--high">F4.
+Refunds: shared login, no approval, credits to any card · High</h3>
+<ul>
+<li><strong>Condition.</strong> All staff share one processor login,
+with the sign-in code sent to a shared phone. Refunds have no limit, no
+second approval and no review. Credits to any card number are allowed.
+Of 27 refunds and credits tested, 22 were supported. <strong>Five were
+not, and were referred to the board chair under section 7.1 of the
+engagement letter.</strong></li>
+<li><strong>Criteria.</strong> Individual accountability for financial
+transactions; refunds to the original payment method; independent
+review.</li>
+<li><strong>Cause.</strong> The account was set up with one login, and
+nobody ever reviewed refund activity.</li>
+<li><strong>Effect.</strong> Money can leave without detection, and no
+record can show who sent it. That is unfair to everyone who uses the
+login.</li>
+<li><strong>Recommendation.</strong> Personal logins; credits to other
+cards disabled; monthly refund report reviewed by someone who does not
+issue refunds.</li>
+<li><strong>Response.</strong> Accepted. See <a
+href="refund-testing.html">WP-GIV-02</a>.</li>
+</ul>
+<h3 id="f5-offering-custody-and-count--high">F5. Offering custody and
+count · High</h3>
+<ul>
+<li><strong>Condition.</strong> Plates emptied into an unsealed bag
+carried by one person, on the observed Sunday a teenager. Counters count
+separate piles without re-counting. One counter completed the count
+alone on the observed Sunday and on 2 of 12 tested Sundays. Cheques not
+endorsed. Safe code unchanged since 2019 and known by seven people,
+including a former counter.</li>
+<li><strong>Criteria.</strong> Dual custody of cash from collection to
+deposit.</li>
+<li><strong>Cause.</strong> Long-standing practice, never written
+down.</li>
+<li><strong>Effect.</strong> A loss before or during the count would not
+be detected, and counters cannot be protected from suspicion if a
+question arises.</li>
+<li><strong>Recommendation.</strong> Written procedure; tamper-evident
+bags sealed at collection and carried by two adults; both counters count
+all cash; count suspended if one must leave; endorsement stamp; safe
+code changed and limited to three people.</li>
+<li><strong>Management disagreement.</strong> <em>"In nine years there
+has been no loss, and the deposits match the count every time. I believe
+this should be Medium. I accept the recommendations."</em>
+(Treasurer)</li>
+<li><strong>Why the rating stayed High.</strong> All 12 tested deposits
+matched their count sheets to the cent. That is exactly what a loss
+before the count would look like. The rating reflects the absence of
+anything that would detect a loss, not a suggestion that one occurred.
+The treasurer's view is recorded in the board report beside the
+finding.</li>
+</ul>
+<h3
+id="f8-email-impersonation-and-payment-change-verification--medium-proposed-high">F8.
+Email impersonation and payment change verification · Medium (proposed
+High)</h3>
+<ul>
+<li><strong>Condition.</strong> Two conflicting SPF records (a permanent
+error under RFC 7208), no DKIM signing and DMARC at p=none allowed the
+September message showing the pastor's real address to be delivered.
+Microsoft 365 sign-in logs showed his mailbox was not accessed:
+impersonation, not compromise. Call-back on supplier banking changes was
+informal.</li>
+<li><strong>Criteria.</strong> Email authentication good practice;
+documented verification of payment instructions.</li>
+<li><strong>Recommendation.</strong> Fix SPF, enable DKIM, move DMARC to
+quarantine then reject; written rule that any bank change or gift card
+request is confirmed by phone on a number already on file.</li>
+<li><strong>Why the rating moved.</strong> At the draft findings
+meeting, management brought evidence: SPF fixed and DKIM enabled, DMARC
+at quarantine that morning, and the written call-back rule signed by all
+staff. That changed likelihood, which is what the rating measures.
+<strong>A rating moves when the evidence moves, not when someone
+pushes.</strong></li>
+</ul>
+<h3 id="f10-vulnerable-sector-screening--high">F10. Vulnerable sector
+screening · High</h3>
+<ul>
+<li><strong>Condition.</strong> 3 of 64 volunteers serving with children
+had lapsed checks, by 2, 5 and 8 months, and were still serving. Scans
+of checks forwarded to the safeguarding lead's personal email and saved
+in a folder shared with nine people. Records kept since 2014, including
+31 people who no longer volunteer.</li>
+<li><strong>Criteria.</strong> Church screening policy; PIPEDA fair
+information principles 4.5 (limiting retention) and 4.7 (safeguards),
+used as a benchmark of good practice. PIPEDA's application to a
+charity's non-commercial activities is limited, so the report does not
+assert non-compliance with it.</li>
+<li><strong>Recommendation.</strong> No one serves without a current
+check; expiry alerts in the church management system; one restricted
+folder, never personal email; retention rule agreed with counsel.</li>
+<li><strong>Response.</strong> The three volunteers stepped back the
+same day the finding was discussed. Personal email cleared that
+evening.</li>
+</ul>
+<h2 id="4-remediation-at-ninety-days">4. Remediation at ninety days</h2>
+<p>32 remediation actions were adopted by the board on January 5, 2027.
+At the ninety-day check on April 2:</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Status</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Done, evidence seen</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>Reported done, evidence not yet seen</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>In progress</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Not started</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p>"Done" means the evidence named in the plan was seen, not that
+someone said so.</p>
+<p class="muted" style="margin-top:48px"><a href="index.html">Back to the case study</a></p>
+</main>
+<footer><div class="wrap">Constructed scenario. Port Alder Community Church and every person, vendor and domain named here are fictional. No client data is shown.</div></footer>
+</body>
+</html>

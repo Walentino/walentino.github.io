@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final report to the board | Adewale Odeja</title>
+<meta name="description" content="Simulated SME controls and compliance review of a fictional Ontario church, by Adewale Odeja, CISA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Adewale Odeja, CISA</a>
+  <ul><li><a class="link" href="index.html">PACC case study</a></li><li><a class="link" href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="doc">
+<p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">PACC controls and compliance review</a> / Final
+report to the board</p>
+<h1 id="stewardship-risk-review-final-report-to-the-board">Stewardship
+Risk Review: Final Report to the Board</h1>
+<h2 id="port-alder-community-church--december-18-2026">Port Alder
+Community Church | December 18, 2026</h2>
+<blockquote>
+<p><strong>Constructed scenario.</strong> Port Alder Community Church,
+the town of Port Alder, and every person, vendor, product and domain in
+this report are fictional. Any resemblance to a real organisation is
+coincidental. Prepared by Adewale Odeja as a training and portfolio
+exercise.</p>
+</blockquote>
+<div class="tbl"><table>
+<tbody>
+<tr class="odd">
+<td><strong>Prepared for</strong></td>
+<td>The Board of Directors, Port Alder Community Church</td>
+</tr>
+<tr class="even">
+<td><strong>Prepared by</strong></td>
+<td>Adewale Odeja, CISA, Independent Risk and Compliance Advisor</td>
+</tr>
+<tr class="odd">
+<td><strong>Engagement</strong></td>
+<td>AO-2026-001, engagement letter of November 4, 2026, and change order
+1 of December 9, 2026</td>
+</tr>
+<tr class="even">
+<td><strong>Fieldwork</strong></td>
+<td>November 10 to December 10, 2026</td>
+</tr>
+<tr class="odd">
+<td><strong>Presented to the board</strong></td>
+<td>January 5, 2027</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>About this report.</strong> This report comes from an
+<strong>advisory engagement</strong>. It sets out what I found and what
+I recommend. It is <strong>not an audit</strong>, a review engagement,
+or any other kind of assurance engagement. I am not a public accounting
+firm, and nothing here is an opinion on the church's financial
+statements, its internal controls, its compliance with any law or
+standard, or the security of its systems. The report does not say the
+church is safe or compliant, and must not be quoted in donor
+communications or described as an audit or certification. Two matters in
+section 8 are still open, and this report expresses no view on
+either.</p>
+<h2 id="1-summary-for-the-board">1. Summary for the board</h2>
+<h3 id="the-question-you-asked">The question you asked</h3>
+<p>In September 2026 someone impersonated the pastor by email, and a
+volunteer bought $1,500 in gift cards. In October someone impersonated a
+supplier and nearly redirected a payment. The board asked whether these
+were isolated events, or signs that money or information could go wrong
+at the church without anyone noticing.</p>
+<h3 id="the-answer">The answer</h3>
+<p><strong>They were not isolated.</strong> In almost every area I
+looked at, the church depends on trusted people doing the right thing.
+Very little would show the board if someone made a mistake, or did
+something wrong. That is common in churches of this size, and it is
+fixable. But it is the main thing this report asks the board to
+change.</p>
+<h3 id="the-three-things-that-matter-most">The three things that matter
+most</h3>
+<ol type="1">
+<li><strong>Donors' card details were stored on the church's website
+server.</strong> From April 2025 to December 2026, a setting in the
+donation software recorded the full card details of 214 failed donation
+attempts. This was found on December 8, contained within half an hour,
+and reported to the card processor the same day. Whether anyone accessed
+the files earlier cannot be confirmed or ruled out. <em>(F1,
+Critical)</em></li>
+<li><strong>The church does not control its own name on the
+internet.</strong> The web address, its settings and the hosting are all
+held personally by a former volunteer. The web address expires on March
+14, 2027. If it lapses, the website, online giving and every church
+email address stop working. <em>(F3, High)</em></li>
+<li><strong>Money can leave without anyone noticing or being able to say
+who sent it.</strong> Everyone in the office shares one login to the
+card processor, which allows refunds to any card with no approval. No
+one compares what is counted on Sunday, what reaches the bank and what
+is recorded for receipts. <em>(F4, F5, F6, High)</em></li>
+</ol>
+<h3 id="what-the-board-needs-to-do">What the board needs to do</h3>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Decision or action</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Receive this report and adopt the remediation plan, with named
+owners and dates</td>
+<td>January 5, 2027</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Make sure the web address is renewed and transferred to the
+church</td>
+<td>Before March 14, 2027</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Fund the move of online card giving to the processor's own hosted
+page before it returns to the website</td>
+<td>Q1 2027</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Name one paid person, staff or contractor, responsible for the
+website</td>
+<td>Q1 2027</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Require the quarterly oversight report in section 7</td>
+<td>From April 2027</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Continue to oversee the two matters in section 8, with counsel</td>
+<td>Ongoing</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Rating</th>
+<th>Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Critical</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Medium</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Low</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p>The treasurer disagrees with one rating, F5. His view is recorded
+next to that finding.</p>
+<h2 id="2-the-findings-at-a-glance">2. The findings at a glance</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Finding</th>
+<th>Rating</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F1</td>
+<td>Donors' card details stored on the website server</td>
+<td><strong>Critical</strong></td>
+<td>Board chair, treasurer</td>
+</tr>
+<tr class="even">
+<td>F2</td>
+<td>Website card giving fell under the strictest card industry rules,
+without the required protections</td>
+<td>High</td>
+<td>Treasurer</td>
+</tr>
+<tr class="odd">
+<td>F3</td>
+<td>Web address, its settings and hosting held personally by a former
+volunteer</td>
+<td>High</td>
+<td>Treasurer</td>
+</tr>
+<tr class="even">
+<td>F4</td>
+<td>Refunds: one shared login, no approval, refunds to any card</td>
+<td>High</td>
+<td>Treasurer</td>
+</tr>
+<tr class="odd">
+<td>F5</td>
+<td>Sunday offerings: custody and counting</td>
+<td>High</td>
+<td>Treasurer</td>
+</tr>
+<tr class="even">
+<td>F6</td>
+<td>No check that counts, bank deposits and giving records agree</td>
+<td>High</td>
+<td>Bookkeeper, treasurer</td>
+</tr>
+<tr class="odd">
+<td>F7</td>
+<td>Shared administrator accounts; no process when people leave</td>
+<td>High</td>
+<td>Office administrator</td>
+</tr>
+<tr class="even">
+<td>F8</td>
+<td>Church email could be forged; payment change checks informal</td>
+<td>Medium</td>
+<td>IT provider, treasurer</td>
+</tr>
+<tr class="odd">
+<td>F9</td>
+<td>Tax receipts: missing details; event fees receipted as gifts</td>
+<td>Medium</td>
+<td>Office administrator, treasurer</td>
+</tr>
+<tr class="even">
+<td>F10</td>
+<td>Children's ministry screening: lapsed checks; how records are
+kept</td>
+<td>High</td>
+<td>Safeguarding lead</td>
+</tr>
+<tr class="odd">
+<td>F11</td>
+<td>Privacy notice does not match what the website does</td>
+<td>Medium</td>
+<td>Office administrator</td>
+</tr>
+<tr class="even">
+<td>F12</td>
+<td>The church holds no copy of its own giving or accounting
+records</td>
+<td>Medium</td>
+<td>IT provider, bookkeeper</td>
+</tr>
+<tr class="odd">
+<td>F13</td>
+<td>Foyer card machine: refund code on a label; no tamper checks</td>
+<td>Medium</td>
+<td>Facilities lead</td>
+</tr>
+<tr class="even">
+<td>F14</td>
+<td>The board receives too little to spot a problem</td>
+<td>Medium</td>
+<td>Treasurer, board</td>
+</tr>
+<tr class="odd">
+<td>F15</td>
+<td>September loss paid from the benevolence fund; insurer not told</td>
+<td>Low</td>
+<td>Treasurer</td>
+</tr>
+<tr class="even">
+<td>F16</td>
+<td>2024 charity return filed nine days late</td>
+<td>Low</td>
+<td>Bookkeeper</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-money-coming-in">3. Money coming in</h2>
+<h3 id="f5-sunday-offerings-custody-and-counting--high">F5. Sunday
+offerings: custody and counting · High</h3>
+<p><strong>What I found.</strong> After the service, plates are emptied
+into an unsealed cloth bag that one person carries to the counting room.
+On the Sunday I observed, that person was about fifteen. The two
+counters each count a different part of the offering, and neither checks
+the other's. On that Sunday, and on two of the twelve Sundays I tested,
+one counter finished the count alone. Cheques are not stamped "for
+deposit only". Seven people know the safe code, which has not changed
+since 2019.</p>
+<p><strong>Why it matters.</strong> Every other way people give leaves a
+record. Cash doesn't. Once the count is done, the count sheet is the
+only evidence of what was in the plate. If cash went missing before or
+during the count, nothing would show it, and nothing would protect the
+counters from suspicion if a question were raised.</p>
+<p><strong>What the testing showed.</strong> For all twelve Sundays
+tested, the bank deposit matched the count sheet to the cent. That shows
+the counted money reached the bank. It cannot show what was in the plate
+before it was counted, which is the gap this finding is about.</p>
+<p><strong>What I recommend.</strong> A short written count procedure.
+Tamper-evident numbered bags, sealed at the back of the sanctuary and
+carried by two adults. Both counters count all the cash and sign only
+once totals are written. If one counter must leave, the count stops and
+the bag is sealed. A "for deposit only" stamp. Safe code changed now and
+known by no more than three named people.</p>
+<p><strong>Treasurer's view.</strong> <em>"In nine years there has been
+no loss, and the deposits match the count every time. I believe this
+should be rated Medium. I accept the recommendations."</em></p>
+<p><strong>Why I kept it at High.</strong> Matching deposits are exactly
+what a loss before the count would look like. The rating reflects the
+absence of anything that would detect a loss, not any suggestion that
+one occurred.</p>
+<h3
+id="f6-no-check-that-counts-bank-deposits-and-giving-records-agree--high">F6.
+No check that counts, bank deposits and giving records agree · High</h3>
+<p><strong>What I found.</strong> Three records describe the same money:
+what was counted or charged, what reached the bank, and what was entered
+in the giving system for donors' receipts. Nobody compares the third
+with the other two. In three of twelve Sundays tested, the giving system
+did not match the count. One $250 gift was never entered, so that donor
+would not have received a receipt for it. Building Fund gifts reach the
+accounts only through a monthly journal from a report nobody checks.</p>
+<p><strong>What I recommend.</strong> A monthly one-page reconciliation
+of giving system totals by fund against the bank and the processors,
+prepared by the bookkeeper and initialled by the treasurer.</p>
+<h3
+id="f4-refunds-one-shared-login-no-approval-refunds-to-any-card--high">F4.
+Refunds: one shared login, no approval, refunds to any card · High</h3>
+<p><strong>What I found.</strong> Everyone in the office signs in to the
+card processor's portal with the same login. Any refund, of any amount,
+can be issued without approval, and can be sent to a card other than the
+one the donor used. No one reviews the list of refunds. I examined every
+refund and credit from January 2025 to November 2026, 27 in total.
+Twenty-two had a clear reason and supporting records. <strong>Five did
+not, and have been referred to the board chair under section 7.1 of the
+engagement letter.</strong> See section 8.</p>
+<p><strong>What I recommend.</strong> A personal login for each person
+who needs the portal. Ask the processor to switch off refunds to other
+cards. A monthly refund report reviewed by someone who does not issue
+refunds.</p>
+<h3
+id="f15-the-september-loss-paid-from-the-benevolence-fund-insurer-not-told--low">F15.
+The September loss paid from the benevolence fund; insurer not told ·
+Low</h3>
+<p>The $1,500 reimbursed to the volunteer was charged to the benevolence
+fund, which holds gifts given to help people in need. The insurer was
+not told. Move the charge to general expenses, and report any future
+loss to the insurer within days.</p>
+<h2 id="4-card-giving-and-the-website">4. Card giving and the
+website</h2>
+<p><em>A note on terms. Any organisation that accepts cards agrees,
+through its card processor, to follow the card industry's security
+standard, called PCI DSS, and confirms each year that it does so,
+usually by completing a self-assessment questionnaire. The more card
+information touches the organisation's own systems, the longer and
+harder the questionnaire.</em></p>
+<h3
+id="f1-donors-card-details-stored-on-the-website-server--critical">F1.
+Donors' card details stored on the website server · Critical</h3>
+<p><strong>What I found.</strong> The website's donation software has a
+backup route it uses when the processor's own software fails to load in
+a donor's browser. On that route, card details are sent to the church's
+server. Since April 29, 2025, a setting, apparently switched on during
+the software company's support work, saved every failed attempt to a
+file on the server, including full card number, expiry date and
+three-digit security code. There were 214 entries. The files were in a
+folder reachable from the internet by anyone who knew the address.</p>
+<p><strong>What happened next.</strong> Found on December 8. Within
+thirty minutes the setting was off and public access blocked, without
+deleting anything. By early afternoon the card form had been removed
+from the website, the insurer notified, a lawyer engaged, and the
+processor told by the treasurer. The web host's records for the previous
+fourteen days show no outside access. No earlier records exist.</p>
+<p><strong>What I recommend.</strong> Follow the processor's
+instructions in full and keep the files until the processor and counsel
+say otherwise. Do not return card giving to the website until F2's
+recommendation is in place. Follow counsel's advice on telling
+donors.</p>
+<h3
+id="f2-website-card-giving-under-the-strictest-rules-without-the-required-protections--high">F2.
+Website card giving under the strictest rules, without the required
+protections · High</h3>
+<p><strong>What I found.</strong> Because card details could reach the
+church's server, the website fell under the longest questionnaire, SAQ
+D. Before December 8 I had concluded, from browser testing, that it fell
+under a shorter one, SAQ A-EP. The server review showed that was wrong,
+and I corrected it in writing on December 9. Under either version, the
+required protections were missing: current software, control of outside
+software on the donation page, detection of changes to that page,
+quarterly external scans, and an agreement with the web host. The church
+had paid about $1,100 in monthly fees since 2023 for never filing a
+self-assessment. Staff had also taken card numbers by phone and written
+some in a notebook, now destroyed.</p>
+<p><strong>What I recommend.</strong> When card giving returns to the
+website, use the processor's own hosted payment page, so donors type
+card details on the processor's page, not the church's. That reduces the
+church's obligations to the shortest questionnaire, and filing it ends
+the monthly fee.</p>
+<h3
+id="f3-web-address-settings-and-hosting-held-by-a-former-volunteer--high">F3.
+Web address, settings and hosting held by a former volunteer · High</h3>
+<p><strong>What I found.</strong> The web address was registered in 2014
+by a youth volunteer, who still holds it, the DNS settings and the
+hosting in his own name. He moved out of province in 2024. The
+registration account could not be opened because its recovery email no
+longer exists, and automatic renewal relied on an expired card. The
+address expires March 14, 2027. The former volunteer has been helpful
+and committed to dates for each transfer.</p>
+<p><strong>What I recommend.</strong> Complete the transfers, put
+renewal dates in the treasurer's calendar, and give every critical
+account two named administrators, at least one paid.</p>
+<h3 id="f13-foyer-card-machine--medium">F13. Foyer card machine ·
+Medium</h3>
+<p>The card machine stays unattended on the welcome desk, with its
+refund password handwritten on a label underneath. Nobody checks it for
+tampering. Remove the label and change the password, store the machine
+in the office between services, and do a quick visual check before each
+service.</p>
+<h2 id="5-systems-email-and-backups">5. Systems, email and backups</h2>
+<h3
+id="f7-shared-administrator-accounts-no-process-when-people-leave--high">F7.
+Shared administrator accounts; no process when people leave · High</h3>
+<p>The most powerful Microsoft 365 account, which can read anyone's
+email, was shared, had no second sign-in check, and its password was on
+a card in the safe. The same password opened a shared website
+administrator account. Across six systems I found former volunteers, a
+former treasurer and a software company's support account still able to
+sign in. One volunteer has been the only administrator of the giving
+system since 2015. There is no leaver checklist. Most of this was fixed
+during the review. A leaver checklist and an annual access review by the
+treasurer remain.</p>
+<h3
+id="f8-church-email-could-be-forged-payment-change-checks-informal--medium">F8.
+Church email could be forged; payment change checks informal ·
+Medium</h3>
+<p>The settings that let other email systems confirm a message came from
+the church were broken or missing. That is how, in September, an email
+could show the pastor's real address without coming from the church.
+Sign-in records show his account was not accessed. Settings were
+corrected and tightened during the review, and all staff signed a rule
+that any bank change or gift card request is confirmed by phone.
+<em>Proposed as High; lowered to Medium on the evidence of these
+changes.</em></p>
+<h3 id="f12-the-church-holds-no-copy-of-its-own-records--medium">F12.
+The church holds no copy of its own records · Medium</h3>
+<p>Microsoft 365 backup works: a restore was demonstrated on December 9.
+The giving and accounting systems are backed up only by their providers,
+and the church has never exported its own copy. Export both each quarter
+to restricted church storage.</p>
+<h2 id="6-receipts-filings-and-personal-information">6. Receipts,
+filings and personal information</h2>
+<h3 id="f9-tax-receipts--medium">F9. Tax receipts · Medium</h3>
+<p>All ten 2025 receipts tested lacked the place of issue and showed an
+outdated CRA web address. The fund used for paid events is set to issue
+receipts, so retreat attendees who paid $140 were receipted for $140,
+although about $112 paid for their meals and lodging: $4,368 receipted
+across 39 attendees that should not have been. When a donor receives
+something in return, only the amount above its value can be receipted.
+Correct the template and fund setting before February, and get advice
+from the auditor or a charity tax adviser on the 2026 retreat and the
+2025 receipts already issued.</p>
+<h3 id="f16-2024-charity-return-filed-late--low">F16. 2024 charity
+return filed late · Low</h3>
+<p>The 2024 T3010 was filed nine days after its June 30 due date. Put
+the deadline in two calendars.</p>
+<h3 id="f10-childrens-ministry-screening--high">F10. Children's ministry
+screening · High</h3>
+<p>Of 64 people on the fall rosters, 61 had current vulnerable sector
+checks. Three had lapsed and were still serving. Paper records are well
+kept. But scans had been forwarded to a personal email account and saved
+in a folder shared with nine people, and records go back to 2014. No one
+should serve without a current check; track expiry dates with alerts;
+keep copies in one restricted folder; agree a retention period with
+counsel. The three volunteers stepped back the day this was
+discussed.</p>
+<h3 id="f11-privacy-notice--medium">F11. Privacy notice · Medium</h3>
+<p>The 2021 privacy notice says the church never shares information.
+Advertising and analytics tools run on every page, including the prayer
+request and children's sign-up pages, and the giving system stores data
+in the United States. Remove the tools from sensitive pages and update
+the notice. Canada's federal privacy law applies only to some of a
+charity's activities, but its principles remain the recognised standard,
+and donors and parents expect the church to keep its word.</p>
+<h2 id="7-board-oversight">7. Board oversight</h2>
+<h3
+id="f14-the-board-receives-too-little-to-spot-a-problem--medium">F14.
+The board receives too little to spot a problem · Medium</h3>
+<p>The board receives audited statements once a year and budget
+comparisons. None of the information that would have shown the problems
+in this report reaches it. With so few staff, nobody can check everyone
+else's work, so the board's regular review becomes one of the church's
+most important controls.</p>
+<h3 id="the-quarterly-report-eight-questions">The quarterly report:
+eight questions</h3>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Question</th>
+<th>Who answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Did the monthly reconciliations of giving records to the bank and
+processors agree, and if not, why not?</td>
+<td>Bookkeeper</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>What refunds were issued, by whom, to which card, and who reviewed
+them?</td>
+<td>Treasurer</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Were any Sunday counts done by fewer than two people?</td>
+<td>Treasurer</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Who joined or left roles with system access, and was access added or
+removed?</td>
+<td>Office administrator</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Are all children's ministry volunteers' checks current?</td>
+<td>Safeguarding lead</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Were any requests to change bank details or buy gift cards received,
+and how were they confirmed?</td>
+<td>Treasurer</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>When does each critical account next renew, and is it in a named
+person's calendar?</td>
+<td>Treasurer</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>What is the status of each open finding in this report?</td>
+<td>Treasurer</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="8-matters-reported-to-the-board-chair">8. Matters reported to
+the board chair</h2>
+<p>The engagement letter requires certain matters to be reported to the
+board chair in confidence, outside the normal draft process. Two were
+reported. Both remain open. This section says what was reported and
+when, and deliberately nothing more.</p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Matter A: card details on the website server</th>
+<th>Matter B: refunds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Reported</strong></td>
+<td>December 8, 2026, under section 7.3</td>
+<td>December 9, 2026, under section 7.1</td>
+</tr>
+<tr class="even">
+<td><strong>Related finding</strong></td>
+<td>F1</td>
+<td>F4</td>
+</tr>
+<tr class="odd">
+<td><strong>What was reported</strong></td>
+<td>Stored card data, contained and preserved</td>
+<td>Five refunds and credits without the support the other 22 had</td>
+</tr>
+<tr class="even">
+<td><strong>Open</strong></td>
+<td>Processor assessing whether a forensic investigation is required;
+counsel advising on donor notification</td>
+<td>With counsel</td>
+</tr>
+<tr class="odd">
+<td><strong>What this report does not say</strong></td>
+<td>Whether any card details were taken. That is not known</td>
+<td>Why the five lack support, or who issued them. The evidence
+available to me shows neither</td>
+</tr>
+</tbody>
+</table></div>
+<p>Unsupported transactions often have ordinary explanations. Everyone
+who used the shared login is entitled to have Matter B handled fairly
+and without speculation. Neither matter changes the recommendations in
+this report. Both are reasons to implement them.</p>
+<h2 id="9-what-is-working-well">9. What is working well</h2>
+<ul>
+<li><strong>Counted cash reaches the bank intact.</strong> All twelve
+Sundays tested matched to the cent.</li>
+<li><strong>The treasurer refused a fake e-Transfer "return"
+request</strong> in April 2026 after checking the bank.</li>
+<li><strong>A supplier call-back stopped a fraud</strong> in October. It
+is now a written rule.</li>
+<li><strong>Screening is taken seriously.</strong> Ninety-five percent
+of volunteers were current, and lapsed volunteers were stood down the
+same day.</li>
+<li><strong>The church responded to the most serious finding
+well.</strong> Contained, preserved, and reported to the processor and
+insurer within four hours.</li>
+<li><strong>Staff engaged openly.</strong> Where records didn't exist,
+staff said so rather than creating them.</li>
+</ul>
+<h2 id="10-scope-approach-and-limitations">10. Scope, approach and
+limitations</h2>
+<p><strong>In scope:</strong> offerings and deposits; website,
+recurring, phone, e-Transfer and terminal giving, refunds and the
+providers involved; domain, DNS and hosting; receipting and the T3010;
+email security and payment fraud; access to main systems; personal
+information including screening records; backup; board oversight.
+Activity from January 1, 2025.</p>
+<p><strong>How:</strong> interviews and walkthroughs; observation of one
+Sunday count; systems viewed on screen with staff operating them, never
+using anyone's password; inspection of records and exports; tests of
+samples or full populations; one $1 donation from my own card with
+written approval, refunded the same day. Before the engagement, public
+information only.</p>
+<p><strong>Not done:</strong> no audit or assurance of any kind; no
+scanning, penetration testing or attempts to bypass controls; no
+investigation of any person; no legal or tax advice; no testing of
+providers' own controls.</p>
+<p><strong>Limitations:</strong> testing was largely sample-based;
+controls can be overridden by collusion or by people in authority;
+conditions change after fieldwork. Server access was not available until
+December 8, and an interim memo of December 4 that relied on browser
+testing alone was corrected in writing on December 9. Finding F2
+reflects the corrected position.</p>
+<p><strong>Use:</strong> for the board and management. May be shared
+whole with the church's auditor, insurer, counsel and payment processor
+with the statement: <em>"This report was produced by an advisory
+engagement and does not provide assurance."</em></p>
+<p>Adewale Odeja, CISA · December 18, 2026</p>
+<p class="muted" style="margin-top:48px"><a href="index.html">Back to the case study</a></p>
+</main>
+<footer><div class="wrap">Constructed scenario. Port Alder Community Church and every person, vendor and domain named here are fictional. No client data is shown.</div></footer>
+</body>
+</html>

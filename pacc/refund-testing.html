@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refund and credit testing | Adewale Odeja</title>
+<meta name="description" content="Simulated SME controls and compliance review of a fictional Ontario church, by Adewale Odeja, CISA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Adewale Odeja, CISA</a>
+  <ul><li><a class="link" href="index.html">PACC case study</a></li><li><a class="link" href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="doc">
+<p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">PACC controls and compliance review</a> / Refund
+and credit testing</p>
+<h1 id="wp-giv-02-refunds-and-credits-testing">WP-GIV-02 Refunds and
+Credits Testing</h1>
+<h2
+id="port-alder-community-church--advisory-engagement-ao-2026-001">Port
+Alder Community Church | Advisory engagement AO-2026-001</h2>
+<blockquote>
+<p><strong>Constructed scenario.</strong> The church, processor and
+people are fictional. This is the version of the workpaper that went
+into the management draft. The restricted section, reported only to the
+board chair under the engagement letter, is described here but not
+reproduced, in the same way a real file would handle it.</p>
+</blockquote>
+<div class="tbl"><table>
+<tbody>
+<tr class="odd">
+<td><strong>Prepared by / date</strong></td>
+<td>A. Odeja / December 9, 2026</td>
+</tr>
+<tr class="even">
+<td><strong>Objective</strong></td>
+<td>Confirm every refund or credit returned money to the original donor
+for a valid reason</td>
+</tr>
+<tr class="odd">
+<td><strong>Population</strong></td>
+<td>All 27 refunds and credits processed in the Lakeport merchant
+portal, January 1, 2025 to November 17, 2026 (evidence request item 13,
+unedited export)</td>
+</tr>
+<tr class="even">
+<td><strong>Sample</strong></td>
+<td>All 27. The population was small, the control risk high, and a full
+population avoids any argument about sample selection</td>
+</tr>
+<tr class="odd">
+<td><strong>Evidence inspected</strong></td>
+<td>Lakeport refund report with type, last four digits and time;
+original transactions; the giving@ mailbox for donor requests; donor
+notes in the church management system</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="1-why-this-test">1. Why this test</h2>
+<p>The walkthrough on November 17 found three conditions that, together,
+make refunds the classic way money leaves a small merchant account:</p>
+<ol type="1">
+<li><strong>One shared login.</strong> All office staff sign in as
+office@. The sign-in code goes to a mobile phone kept on a desk.</li>
+<li><strong>No approval.</strong> Any refund of any amount, with no
+second person.</li>
+<li><strong>Credits to any card.</strong> The portal allows a "credit to
+a different card", used when a donor's original card has been
+replaced.</li>
+</ol>
+<p>On November 24, during the donation trace, the credit function was
+observed working with no limit and no approval. The test was planned
+before that, and run exactly as planned.</p>
+<h2 id="2-attributes">2. Attributes</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Ref</th>
+<th>Attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>An original transaction exists</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Money went to the original card, or a documented reason exists for a
+different card</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Amount does not exceed the original</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>A donor request is on file</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-results">3. Results</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Count</th>
+<th>Total</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Refunds to the original card, matching a duplicate charge from
+website errors</td>
+<td>19</td>
+<td>$1,615</td>
+<td>A, B, C pass. D: 16 of 19 with a donor email, 3 without. Minor</td>
+</tr>
+<tr class="even">
+<td>Credits to a different card, with the donor's emailed request and a
+donor record note</td>
+<td>3</td>
+<td>$275</td>
+<td>All attributes pass</td>
+</tr>
+<tr class="odd">
+<td>Credits to a different card, with no supporting record</td>
+<td>5</td>
+<td>$2,340</td>
+<td><strong>Exceptions. Referred to the board chair</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>27</strong></td>
+<td><strong>$4,230</strong></td>
+<td>22 supported, 5 unsupported</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-what-happened-to-the-five-exceptions">4. What happened to the
+five exceptions</h2>
+<p>The five unsupported credits shared characteristics that made them a
+possible indicator of fraud, and the engagement letter is explicit about
+what happens next:</p>
+<blockquote>
+<p><strong>Section 7.1.</strong> If I find information that indicates
+possible fraud, theft or another illegal act, I will stop work on that
+matter, preserve what I have, and report it promptly and in confidence
+to the board chair. <strong>Section 7.2.</strong> I will not investigate
+further, interview anyone about the matter, or draw conclusions about
+any individual.</p>
+</blockquote>
+<p>So I did four things and no more:</p>
+<ol type="1">
+<li><strong>Stopped.</strong> No further analysis of the five
+transactions.</li>
+<li><strong>Reported in person to the board chair</strong> on December
+9, with a single printed copy of the restricted detail, left with her
+for counsel.</li>
+<li><strong>Recommended</strong> legal advice and a forensic accountant;
+asking the processor to disable credits to other cards (a sound control
+change in its own right); and notifying the insurer under the crime
+coverage.</li>
+<li><strong>Agreed the report wording with the church's counsel</strong>
+before the draft went to staff: the counts, the total, and the fact of
+referral. Nothing that would identify a card, a date or a person.</li>
+</ol>
+<p><strong>What the restricted section held:</strong> destination card,
+link (or lack of one) to any donor, the gifts reversed, the timing
+pattern, and who could have processed them. The evidence narrowed the
+window but did not identify who issued any of the credits, because every
+one was processed under the shared login.</p>
+<p><strong>What I did not do:</strong> ask anyone about them, confirm or
+correct a director's guess about who was in the office, or express any
+view in the report. When a staff member made a remark about the timing
+during the draft findings meeting, which the draft did not contain, I
+recorded the words verbatim, said only that I could not discuss the
+matter, and passed the note to the chair without drawing any
+conclusion.</p>
+<h2 id="5-conclusion">5. Conclusion</h2>
+<p>Twenty-two of 27 reversals are supported. Five credits totalling
+$2,340 are unsupported and have been referred under section 7.1. The
+control weaknesses that made them possible (shared login, no approval,
+credits to any card, no review) are reported in the normal way as
+finding F4, rated <strong>High</strong>.</p>
+<p><strong>Recommendations, accepted by management:</strong></p>
+<ul>
+<li>A personal Lakeport login for each user, each with its own sign-in
+confirmation.</li>
+<li>Credits to cards other than the original disabled by the
+processor.</li>
+<li>A monthly refund report, reviewed and initialled by someone who does
+not issue refunds.</li>
+</ul>
+<p><strong>Ninety-day check:</strong> individual logins and the
+processor's confirmation that credits to other cards are disabled were
+both evidenced by January 14, 2027. The monthly review operated for
+January and February and slipped for March. It is the control most
+likely to fade quietly, and the ninety-day letter asked the finance
+committee to request it at every meeting.</p>
+<h2 id="6-the-lesson-in-this-workpaper">6. The lesson in this
+workpaper</h2>
+<p>In an organisation too small to separate duties, nobody inside the
+process can check it. The compensating control is a <strong>review by
+someone outside it</strong>. One question asked quarterly by the board,
+"what refunds were issued, by whom, to which card, and who reviewed
+them?", would very likely have surfaced this pattern within months.</p>
+<p class="muted" style="margin-top:48px"><a href="index.html">Back to the case study</a></p>
+</main>
+<footer><div class="wrap">Constructed scenario. Port Alder Community Church and every person, vendor and domain named here are fictional. No client data is shown.</div></footer>
+</body>
+</html>

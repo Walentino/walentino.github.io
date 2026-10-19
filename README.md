@@ -6,6 +6,8 @@ Static site. No build step. Works on GitHub Pages as is.
 - index.html: home page
 - lakeridge/index.html: case study
 - lakeridge/*.html: four public workpapers (vendor names fictionalized)
+- pacc/index.html: SME controls and compliance review case study (Port Alder Community Church, simulated)
+- pacc/*.html: five public documents. Regenerate with `bash src/pacc/build.sh`
 - assets/style.css: shared styles
 - src/: Markdown sources and template (not needed on the live site)
 

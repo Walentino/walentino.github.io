@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Correction to the interim memo | Adewale Odeja</title>
+<meta name="description" content="Simulated SME controls and compliance review of a fictional Ontario church, by Adewale Odeja, CISA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Adewale Odeja, CISA</a>
+  <ul><li><a class="link" href="index.html">PACC case study</a></li><li><a class="link" href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+<main class="doc">
+<p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">PACC controls and compliance review</a> / Correction
+to the interim memo</p>
+<h1 id="memo-02-correction-to-the-interim-memo">MEMO-02 Correction to
+the Interim Memo</h1>
+<h2
+id="port-alder-community-church--advisory-engagement-ao-2026-001">Port
+Alder Community Church | Advisory engagement AO-2026-001</h2>
+<blockquote>
+<p><strong>Constructed scenario.</strong> The church, vendors and people
+are fictional. This memo is published because owning an error in writing
+is part of the work. The note after it explains what went wrong and what
+changed in my practice.</p>
+</blockquote>
+<div class="tbl"><table>
+<tbody>
+<tr class="odd">
+<td><strong>To</strong></td>
+<td>Finance Committee, Port Alder Community Church</td>
+</tr>
+<tr class="even">
+<td><strong>Copy</strong></td>
+<td>Board Chair; Lead Pastor</td>
+</tr>
+<tr class="odd">
+<td><strong>From</strong></td>
+<td>Adewale Odeja, CISA</td>
+</tr>
+<tr class="even">
+<td><strong>Date</strong></td>
+<td>Wednesday, December 9, 2026, 9:00 AM</td>
+</tr>
+<tr class="odd">
+<td><strong>Re</strong></td>
+<td>Correction to interim memo of December 4, 2026</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>This memo comes from an advisory engagement. It does not provide
+assurance, and it is not an audit or a PCI DSS assessment.</em></p>
+<h2 id="1-the-correction">1. The correction</h2>
+<p><strong>The interim memo of December 4 said the website giving page
+falls under SAQ A-EP. That is wrong. The giving page falls under SAQ D,
+the most demanding set of card security rules.</strong></p>
+<p>The December 4 memo said in section 5 that a server review could
+change this conclusion. It should have said so in the first line. That
+was my error in presentation, and I have changed how I write conclusions
+that depend on open checks.</p>
+<h2 id="2-why-it-changed">2. Why it changed</h2>
+<p>On December 8 I reviewed the website's server files for the first
+time. Access had not been available before then.</p>
+<ul>
+<li>The donation software has a fallback. When the processor's software
+fails to load in a donor's browser, card details are sent to the
+church's own server instead.</li>
+<li>Since April 29, 2025, a setting in the donation software has written
+every failed attempt to a log file on the server, including full card
+number, expiry date and security code. The setting appears to have been
+enabled during the vendor's support work.</li>
+<li>There are 214 entries, from April 29, 2025 to December 6, 2026.</li>
+</ul>
+<h2 id="3-what-has-happened-since">3. What has happened since</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Time, Dec 8</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10:21</td>
+<td>Logging switched off</td>
+</tr>
+<tr class="even">
+<td>10:38</td>
+<td>Public web access to the log folder blocked by the host. Files
+preserved, not deleted</td>
+</tr>
+<tr class="odd">
+<td>10:52</td>
+<td>Board chair informed, under section 7.3 of the engagement
+letter</td>
+</tr>
+<tr class="even">
+<td>12:40</td>
+<td>Card form removed from the website. Online giving now goes through
+the recurring giving platform</td>
+</tr>
+<tr class="odd">
+<td>1:30</td>
+<td>Insurer notified</td>
+</tr>
+<tr class="even">
+<td>1:45</td>
+<td>Charity lawyer engaged on notification questions</td>
+</tr>
+<tr class="odd">
+<td>2:10</td>
+<td>Processor notified by the treasurer. Case opened</td>
+</tr>
+</tbody>
+</table></div>
+<p>The host's records for the last 14 days show no outside access to the
+files. Older records do not exist, so earlier access can neither be
+confirmed nor ruled out.</p>
+<h2 id="4-what-changes-in-the-december-4-recommendations">4. What
+changes in the December 4 recommendations</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Original recommendation</th>
+<th>Now</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Move the giving page to the processor's hosted payment page</td>
+<td><strong>Still the right fix, and now a precondition</strong> for
+card giving to return to the website</td>
+</tr>
+<tr class="even">
+<td>Remove extra scripts from the giving page</td>
+<td>Overtaken. The card form is no longer on the website</td>
+</tr>
+<tr class="odd">
+<td>Complete the domain recovery</td>
+<td>Unchanged. Still urgent</td>
+</tr>
+<tr class="even">
+<td>File the annual self-assessment</td>
+<td>Deferred until the processor advises</td>
+</tr>
+<tr class="odd">
+<td>Name a paid person responsible for the website</td>
+<td>Unchanged, and more important</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="5-what-i-dont-yet-know">5. What I don't yet know</h2>
+<ul>
+<li>Whether anyone accessed the files before the last 14 days.</li>
+<li>How many of the 214 entries are distinct cards.</li>
+<li>Whether a forensic investigation will be required. That is for the
+processor and the card brands.</li>
+<li>What the church must tell affected donors. That is for the church's
+lawyer.</li>
+</ul>
+<hr />
+<h2 id="note-what-went-wrong-and-what-i-changed">Note: what went wrong,
+and what I changed</h2>
+<p>The December 4 memo was accurate. Its limitations section said
+plainly that two open checks could move the website to SAQ D. But its
+first bullet, the line the committee member who asked for it actually
+read, said "SAQ A-EP" in bold. He told his family the website was
+basically fine.</p>
+<p>A limitation that sits in section 5 does not exist for most readers.
+<strong>When a conclusion depends on an open check, the condition goes
+in the headline</strong>: "Based on browser testing, the page appears to
+fall under SAQ A-EP. A server review on December 8 could change
+this."</p>
+<p>The finance committee also asked a fair question: could I have looked
+sooner? Yes. The former volunteer who held the hosting account could
+have shared his screen ten days earlier. I preferred to wait until
+someone from the church could be present, which the engagement letter
+favours. I conceded the timing in the meeting rather than defending it.
+The memo correction, the hours spent on it and that meeting were not
+billed.</p>
+<p class="muted" style="margin-top:48px"><a href="index.html">Back to the case study</a></p>
+</main>
+<footer><div class="wrap">Constructed scenario. Port Alder Community Church and every person, vendor and domain named here are fictional. No client data is shown.</div></footer>
+</body>
+</html>

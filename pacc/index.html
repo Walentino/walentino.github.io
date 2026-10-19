@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SME Controls and Compliance Review | Port Alder Community Church (Simulated) | Adewale Odeja, CISA</title>
+<meta name="description" content="A simulated advisory controls and compliance review of an Ontario church: donation handling, PCI DSS scope, CRA receipting, access, email fraud and board oversight, from first contact to the ninety-day follow-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Adewale Odeja, CISA</a>
+  <ul>
+    <li><a class="link" href="#approach">Approach</a></li>
+    <li><a class="link" href="#findings">Findings</a></li>
+    <li><a class="link" href="#documents">Documents</a></li>
+    <li><a class="link" href="../index.html#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<main>
+
+<section class="hero"><div class="wrap">
+  <p class="crumbs"><a href="../index.html">Home</a> / PACC controls and compliance review</p>
+  <span class="badge">Simulated engagement</span>
+  <h1 style="margin-top:14px">SME controls and compliance review: Port Alder Community Church</h1>
+  <p class="lede">An advisory review of how a Ontario church of about 480 people receives, records, receipts and protects donations, after an email impersonation cost it $1,500 in gift cards. First contact to the ninety-day follow-up.</p>
+  <div class="grid four">
+    <div class="card"><div class="meta">Entity</div><p>Registered charity, ONCA public benefit corporation. $1.18M revenue, 94% donations. Four staff, one part-time bookkeeper.</p></div>
+    <div class="card"><div class="meta">Five ways to give</div><p>Plate offerings, a church-built website giving page, a recurring giving platform, a foyer card terminal and Interac e-Transfer.</p></div>
+    <div class="card"><div class="meta">The complication</div><p>Nobody owned the website. The domain, DNS and hosting sat in a former volunteer's personal accounts.</p></div>
+    <div class="card"><div class="meta">My role</div><p>Independent advisor. Findings and recommendations, not assurance. No CAS or CSAE opinion.</p></div>
+  </div>
+  <p class="muted" style="margin-top:24px;font-size:15px">The church, the town of Port Alder, every person and vendor (Lakeport Payments, TithePath, GraceGive, MapleNest, Shepherd Base) and all evidence are fictional, built to practise the work. No client data is shown.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid four">
+    <div><div class="stat">214</div><div class="stat-label">stored card records found on the web server and contained without deleting evidence</div></div>
+    <div><div class="stat">A-EP &rarr; D</div><div class="stat-label">PCI scope conclusion corrected in writing when server access arrived</div></div>
+    <div><div class="stat">27 / 5</div><div class="stat-label">refunds tested in full; five unsupported, referred to the board chair, not investigated</div></div>
+    <div><div class="stat">21 of 32</div><div class="stat-label">remediation actions closed with evidence at the ninety-day check</div></div>
+  </div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+  <div class="section-head">
+    <p class="eyebrow">Approach</p>
+    <h2>Scoped to what a small charity actually needs</h2>
+    <p class="muted">A church has no ICFR regime and is not a reporting issuer. Its auditor forms an opinion on the financial statements and does not look at the website, card obligations, receipting or access. This review sits beside that audit, never inside it.</p>
+  </div>
+  <div class="grid two">
+    <div class="card">
+      <div class="meta">1 &middot; Before the first call</div>
+      <h3>Strictly passive reconnaissance</h3>
+      <p>Viewed the public giving page as a donor would and read public DNS, registration and certificate records. Found card fields on the church's own page, 14 scripts beside them, broken SPF and DMARC at p=none. No logins, no form submissions, no scanning. The boundary is written into the engagement letter.</p>
+    </div>
+    <div class="card">
+      <div class="meta">2 &middot; Contract</div>
+      <h3>Advisory, and said plainly</h3>
+      <p>Priced from hours by area ($8,400 for 74 hours at a charity rate), not from the client's approval limit. The engagement letter sets what I may and may not touch, and a stop-and-report rule for fraud indicators and card data. Both rules were used.</p>
+    </div>
+    <div class="card">
+      <div class="meta">3 &middot; Fieldwork</div>
+      <h3>Follow the money through every door</h3>
+      <p>Observed a Sunday count. Traced a $50 gift from click to bank to giving records to receipt, and a $1 test donation from my own card through the browser. Tested 12 Sundays three ways, all 27 refunds, ten receipts against Income Tax Regulations s. 3501, and 64 volunteers' screening.</p>
+      <p><a href="pci-scope.html">WP-CARD-03 PCI DSS scope determination</a></p>
+    </div>
+    <div class="card">
+      <div class="meta">4 &middot; Report</div>
+      <h3>Written for a board with no technical member</h3>
+      <p>Sixteen findings with condition, criteria, cause, effect and recommendation. One Critical, seven High. Management's disagreement recorded beside the finding. Eight questions the board now asks every quarter.</p>
+      <p><a href="board-report.html">RPT-01 Final report to the board</a></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="findings"><div class="wrap">
+  <div class="section-head">
+    <p class="eyebrow">What the work found</p>
+    <h2>Three findings that changed the engagement</h2>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>The page only looked like SAQ A-EP.</h3>
+      <p>A browser trace showed card data going straight to the processor, the SAQ A-EP pattern. The server review showed the plugin had a fallback route that sent cards to the church's own server, and a support-enabled log that had kept 214 of them, with security codes, in a public folder for 19 months. I stopped the volunteer who reached to delete the files, contained them in 24 minutes, and told the chair within the hour. The treasurer, not me, reported to the processor.</p>
+    </div>
+    <div class="card">
+      <h3>Five refunds to one card, and nothing more said.</h3>
+      <p>One shared login could send refunds to any card with no approval. Twenty-two of 27 refunds were supported. Five, all to one card linked to no donor, were not. Under the engagement letter I stopped, reported to the chair, and recommended counsel. When the room offered names, I confirmed none. The report gives the count, the total and the fact of referral.</p>
+    </div>
+    <div class="card">
+      <h3>Matching deposits proved nothing about the plate.</h3>
+      <p>All twelve tested deposits matched their count sheets to the cent. The treasurer argued that justified a lower rating. It doesn't: a loss before the count would produce exactly that result. The rating stayed High, and his view went into the report in his own words.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="section-head">
+    <p class="eyebrow">Judgment calls</p>
+    <h2>Decisions I would defend in review</h2>
+  </div>
+  <div class="grid two">
+    <div class="card"><h3>I corrected my own memo in the first line</h3><p>The interim memo led with "SAQ A-EP" and put the open server check in its last section. When the check changed the answer, the correction said so in its first sentence and apologised once. The lesson: a condition belongs in the headline. <a href="correction-memo.html">MEMO-02</a></p></div>
+    <div class="card"><h3>A rating moved on evidence, not pressure</h3><p>Email impersonation was proposed High. Management brought SPF fixed, DKIM on, DMARC at quarantine and a signed call-back rule. Likelihood changed, so it went to Medium. The offering count rating was pushed just as hard, with no new evidence, and stayed High.</p></div>
+    <div class="card"><h3>PIPEDA as a benchmark, not a charge</h3><p>PIPEDA reaches only a charity's commercial activities. The report measures donor, prayer and screening records against its fair information principles as good practice, and refers the applicability question to counsel rather than asserting non-compliance.</p></div>
+    <div class="card"><h3>Design the obligation away</h3><p>A volunteer-run church cannot operate script inventories and change detection. The recommendation was the processor's hosted payment page, which moves the church to the shortest questionnaire. Card giving returned that way in February.</p></div>
+    <div class="card"><h3>Declined part of the retainer</h3><p>The board asked me to run the website and help prepare the quarterly report. I declined both: I would then be checking my own work. The retainer covers twice-yearly review only.</p></div>
+    <div class="card"><h3>Priced from the work, not the approval limit</h3><p>The committee could approve $5,000 alone. Pricing at $4,950 was tempting. The real objection turned out to be this year's budget, so splitting payment across two fiscal years won the vote with no rate cut.</p></div>
+  </div>
+</div></section>
+
+<section id="documents"><div class="wrap">
+  <div class="section-head">
+    <p class="eyebrow">Documents</p>
+    <h2>Read the workpapers</h2>
+    <p class="muted">The proposal, engagement letter, walkthrough narratives, risk and control matrix, service provider register and remaining test workpapers are available on request.</p>
+  </div>
+  <ul class="cases">
+    <li><code>RPT-01</code><a href="board-report.html">Final report to the board</a></li>
+    <li><code>WP-CARD-03</code><a href="pci-scope.html">PCI DSS scope determination, with data flow</a></li>
+    <li><code>FR-01</code><a href="findings-register.html">Findings register</a></li>
+    <li><code>WP-GIV-02</code><a href="refund-testing.html">Refund and credit testing</a></li>
+    <li><code>MEMO-02</code><a href="correction-memo.html">Correction to the interim memo</a></li>
+  </ul>
+</div></section>
+
+</main>
+
+<footer><div class="wrap"><a href="../index.html">Adewale Odeja, CISA</a> &middot; Constructed scenario for training. Every organisation, person and vendor is fictional. No client data is shown.</div></footer>
+
+</body>
+</html>
