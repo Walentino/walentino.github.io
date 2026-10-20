@@ -24,5 +24,9 @@ Static site. No build step. Works on GitHub Pages as is.
 - In the signalroot site, change the "SOC Analyst (Tier 1/2)" headline and add a link back to the home page.
 
 ## Editing a workpaper
-Edit the file in src/, then regenerate:
-pandoc src/NAME.md -f gfm-tex_math_dollars -t html5 --template=src/doc-template.html --metadata pagetitle="TITLE" -o lakeridge/NAME.html
+Edit the Markdown in src/ (Lakeridge) or src/pacc/ (Port Alder), then regenerate from the repository root:
+
+    bash src/build-lakeridge.sh
+    bash src/pacc/build.sh
+
+Each script sets every page's title, meta description and Open Graph tags. To change a description, edit it in the script, not in the HTML, or the next rebuild will overwrite it. Keep meta descriptions under 155 characters.
